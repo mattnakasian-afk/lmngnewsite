@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0e0e10"/><text x="50" y="58" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">LMNG</text></svg></template>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="lmng-styles.css">
+  <script src="lmng-bundle.js"></script>
+  <style>body{margin:0;background:var(--paper-0);font-family:var(--font-body);color:var(--ink-900)} a{color:var(--navy-700)} a:hover{color:var(--navy-900)}
+  @media (max-width: 980px){
+    nav{display:none!important}
+    div[style*="flex: 0 1 180px"]{display:none!important}
+  }
+  @media (max-width: 900px){
+    h1{font-size:36px!important}
+    div[style*="grid-template-columns: repeat(4, 1fr)"]{grid-template-columns:repeat(2,1fr)!important}
+    div[style*="grid-template-columns: repeat(3, 1fr)"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: repeat(6, 1fr)"]{grid-template-columns:repeat(3,1fr)!important}
+    div[style*="grid-template-columns: 1fr 340px"],div[style*="grid-template-columns: 1fr 360px"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: 320px 1fr"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: 1.15fr 1fr"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: 1.4fr 1fr 1fr 1.2fr"]{grid-template-columns:1fr 1fr!important}
+    div[style*="position: sticky; top: 130px"],div[style*="position: sticky; top: 100px"]{position:static!important}
+    h1 span{animation:none!important;opacity:1!important;transform:none!important}
+  }
+  @media (max-width: 640px){
+    h1{font-size:30px!important}
+    div[style*="grid-template-columns: repeat(6, 1fr)"]{grid-template-columns:repeat(2,1fr)!important}
+    div[style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: 1.4fr 1fr 1fr 1.2fr"]{grid-template-columns:1fr!important}
+  }
+  @view-transition{navigation:auto}
+  ::view-transition-group(site-nav){animation:none}
+  ::view-transition-old(site-nav),::view-transition-new(site-nav){animation:none}
+  ::view-transition-old(root){animation:none;opacity:0}
+  ::view-transition-new(root){animation:vtFade 180ms ease-out}
+  @keyframes vtFade{from{opacity:0.55}to{opacity:1}}
+  @keyframes heroRise{from{opacity:0;transform:translateY(46px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes heroLine{from{width:0}to{width:40px}}
+  @keyframes wordUp{from{opacity:0;transform:translateY(110%) rotate(2deg)}to{opacity:1;transform:translateY(0) rotate(0)}}
+  @keyframes kenBurns{from{transform:scale(1) translateX(0)}to{transform:scale(1.08) translateX(-1.5%)}}
+  @keyframes scrollCue{0%,100%{transform:translateY(0);opacity:0.7}50%{transform:translateY(8px);opacity:1}}
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; flex-direction: column">
+  <dc-import name="SiteNav" active="home" theme="{{ navTheme }}" hint-size="100%,113px"></dc-import>
+
+  <div style="position: relative; background: var(--ink-900); height: calc(100vh - 260px); min-height: 480px; overflow: hidden">
+    <sc-for list="{{ heroLayers }}" as="ph" hint-placeholder-count="1">
+      <div style="position: absolute; inset: -4%; background-image: url('{{ ph.src }}'); background-size: cover; background-position: center 60%; filter: {{ heroFilter }}; opacity: {{ ph.opacity }}; transition: opacity 1800ms ease-in-out; animation: {{ ph.anim }}"></div>
+    </sc-for>
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14,14,16,0.55) 0%, rgba(14,14,16,0.35) 45%, rgba(14,14,16,0.78) 100%)"></div>
+    <div style="position: relative; max-width: 1240px; margin: 0 auto; height: 100%; padding: 0 24px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-end">
+      <div style="padding-bottom: 56px">
+        <div style="display: flex; align-items: center; gap: 16px; animation: heroRise 700ms ease-out both">
+          <span style="width: 40px; height: 1px; background: var(--brass-300); animation: heroLine 1100ms ease-out 200ms both"></span>
+          <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--paper-50)">Lape Mansfield Nakasian &amp; Gibson, LLC</span>
+        </div>
+        <h1 style="font-family: var(--font-display); font-size: 58px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.12; margin: 18px 0 0; max-width: 880px; color: var(--paper-0)"><span style="display: inline-block; overflow: hidden; vertical-align: bottom"><span style="display: inline-block; animation: wordUp 900ms cubic-bezier(0.16,1,0.3,1) 200ms both">Big</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom"><span style="display: inline-block; animation: wordUp 900ms cubic-bezier(0.16,1,0.3,1) 320ms both">firm</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom"><span style="display: inline-block; animation: wordUp 900ms cubic-bezier(0.16,1,0.3,1) 440ms both">experience.</span></span><br><span style="display: inline-block; overflow: hidden; vertical-align: bottom"><span style="display: inline-block; animation: wordUp 900ms cubic-bezier(0.16,1,0.3,1) 640ms both">Small</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom"><span style="display: inline-block; animation: wordUp 900ms cubic-bezier(0.16,1,0.3,1) 760ms both">firm</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: bottom"><span style="display: inline-block; animation: wordUp 900ms cubic-bezier(0.16,1,0.3,1) 880ms both; color: var(--brass-300)">attention.</span></span></h1>
+        <p style="font-size: 18px; line-height: 1.65; color: var(--paper-50); margin: 20px 0 0; max-width: 560px; animation: heroRise 900ms cubic-bezier(0.16,1,0.3,1) 1150ms both">A boutique, general practice law firm in central Ohio, with particular emphasis on business law and litigation.</p>
+        <div style="display: flex; gap: 16px; margin-top: 36px; animation: heroRise 900ms cubic-bezier(0.16,1,0.3,1) 1350ms both">
+          <a href="contact.dc.html" style="background: var(--paper-0); color: var(--ink-900); border-radius: 9999px; padding: 16px 32px; font-size: 16px; font-weight: 600; text-decoration: none" style-hover="background: var(--paper-100)">Schedule a consultation</a>
+          <a href="practice-areas.dc.html" style="border: 1px solid rgba(255,255,255,0.55); color: var(--paper-0); border-radius: 9999px; padding: 15px 32px; font-size: 16px; font-weight: 600; text-decoration: none" style-hover="background: rgba(255,255,255,0.12)">See our practice areas</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: var(--ink-900); border-top: 1px solid var(--ink-700); overflow: hidden; padding: 18px 0">
+    <div style="display: flex; width: max-content; animation: marquee 36s linear infinite">
+      <sc-for list="{{ marqueeItems }}" as="m" hint-placeholder-count="12">
+        <span style="display: flex; align-items: center; gap: 28px; padding-right: 28px; font-size: 14px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-300); white-space: nowrap">{{ m }}<span style="width: 5px; height: 5px; border-radius: 9999px; background: var(--brass-500); flex: none"></span></span>
+      </sc-for>
+    </div>
+  </div>
+
+  <div ref="{{ statsRef }}" style="flex: 1; background: linear-gradient(180deg, var(--paper-0) 0%, var(--paper-0) 50%, var(--paper-50) 50%, var(--paper-50) 100%)">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 32px 24px 36px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px">
+      <div><div style="font-family: var(--font-display); font-size: 34px; font-weight: 700; color: var(--ink-900)">{{ statFounded }}</div><div style="font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-500); margin-top: 6px">Founded</div></div>
+      <div><div style="font-family: var(--font-display); font-size: 34px; font-weight: 700; color: var(--ink-900)">{{ statYears }}</div><div style="font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-500); margin-top: 6px">Combined experience</div></div>
+      <div><div style="font-family: var(--font-display); font-size: 34px; font-weight: 700; color: var(--ink-900)">Jones Day</div><div style="font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-500); margin-top: 6px">Where our partners practiced</div></div>
+      <div><div style="font-family: var(--font-display); font-size: 34px; font-weight: 700; color: var(--ink-900)">Powell, Ohio</div><div style="font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-500); margin-top: 6px">Central Ohio office</div></div>
+    </div>
+  </div>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+
+  <a href="home-classic.dc.html" style="position: fixed; bottom: 20px; right: 20px; z-index: 60; background: var(--ink-900); color: var(--paper-0); border-radius: 9999px; padding: 10px 18px; font-size: 13px; font-weight: 600; text-decoration: none; box-shadow: 0 4px 16px rgba(0,0,0,0.3)" style-hover="background: var(--ink-700)">View classic version →</a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;headerTheme&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;white&quot;, &quot;ink&quot;], &quot;default&quot;: &quot;white&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Feel&quot;}, &quot;heroMood&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;photo&quot;, &quot;black-and-white&quot;, &quot;ink-flat&quot;], &quot;default&quot;: &quot;photo&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Feel&quot;}, &quot;heroBackdrop&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;slideshow&quot;, &quot;dusk&quot;, &quot;daylight&quot;], &quot;default&quot;: &quot;slideshow&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Feel&quot;}}">
+class Component extends DCLogic {
+  state = { idx: 0, statsSeen: false, founded: 0, years: 0 };
+  photos = [
+    'hero-1.jpg',
+    'hero-2.jpg',
+    'hero-3.jpg'
+  ];
+  statsRef = el => {
+    if (!el || this.obs) return;
+    this.obs = new IntersectionObserver(entries => {
+      if (entries.some(e => e.isIntersecting) && !this.state.statsSeen) {
+        this.setState({ statsSeen: true });
+        const t0 = performance.now(), dur = 1400;
+        const tick = now => {
+          const p = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+          this.setState({ founded: Math.round(1900 + e * 112), years: Math.round(e * 100) });
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      }
+    }, { threshold: 0.4 });
+    this.obs.observe(el);
+  };
+  componentDidMount() {
+    this.timer = setInterval(() => {
+      if ((this.props.heroBackdrop ?? 'slideshow') === 'slideshow') this.setState(s => ({ idx: s.idx + 1 }));
+    }, 6000);
+  }
+  componentWillUnmount() { clearInterval(this.timer); if (this.obs) this.obs.disconnect(); }
+  renderVals() {
+    const mood = this.props.heroMood ?? 'photo';
+    const backdrop = this.props.heroBackdrop ?? 'slideshow';
+    const current = backdrop === 'daylight' ? 1 : (backdrop === 'dusk' ? 0 : this.state.idx % this.photos.length);
+    const heroLayers = mood === 'ink-flat' ? [] : this.photos.map((src, i) => ({
+      src,
+      opacity: i === current ? 1 : 0,
+      anim: 'kenBurns 12s ease-in-out infinite alternate'
+    }));
+    const marquee = ['Mergers & Acquisitions', '$2.5B+ in completed acquisitions', 'Complex Litigation', 'Commercial Real Estate', '21M sq ft industrial portfolio sale', 'Arbitration & Mediation', 'Estate Planning', 'Outside General Counsel', 'Franchising & Distribution', 'Labor & Employment', 'Venture & Private Equity'];
+    return {
+      navTheme: this.props.headerTheme ?? 'white',
+      heroLayers,
+      heroFilter: mood === 'black-and-white' ? 'grayscale(1) contrast(1.08)' : 'none',
+      marqueeItems: [...marquee, ...marquee],
+      statsRef: this.statsRef,
+      statFounded: this.state.statsSeen ? String(this.state.founded) : '2012',
+      statYears: (this.state.statsSeen ? this.state.years : 100) + '+ years'
+    };
+  }
+}
+</script>
+</body>
+</html>

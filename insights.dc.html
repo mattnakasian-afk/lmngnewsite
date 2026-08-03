@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0e0e10"/><text x="50" y="58" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">LMNG</text></svg></template>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="lmng-styles.css">
+  <script src="lmng-bundle.js"></script>
+  <style>body{margin:0;background:var(--paper-0);font-family:var(--font-body);color:var(--ink-900)} a{color:var(--navy-700)} a:hover{color:var(--navy-900)}
+  @media (max-width: 980px){
+    nav{display:none!important}
+    div[style*="flex: 0 1 180px"]{display:none!important}
+  }
+  @media (max-width: 900px){
+    h1{font-size:36px!important}
+    div[style*="grid-template-columns: repeat(4, 1fr)"]{grid-template-columns:repeat(2,1fr)!important}
+    div[style*="grid-template-columns: repeat(3, 1fr)"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: repeat(6, 1fr)"]{grid-template-columns:repeat(3,1fr)!important}
+    div[style*="grid-template-columns: 1fr 340px"],div[style*="grid-template-columns: 1fr 360px"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: 320px 1fr"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: 1.15fr 1fr"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: 1.4fr 1fr 1fr 1.2fr"]{grid-template-columns:1fr 1fr!important}
+    div[style*="position: sticky; top: 130px"],div[style*="position: sticky; top: 100px"]{position:static!important}
+    h1 span{animation:none!important;opacity:1!important;transform:none!important}
+  }
+  @media (max-width: 640px){
+    h1{font-size:30px!important}
+    div[style*="grid-template-columns: repeat(6, 1fr)"]{grid-template-columns:repeat(2,1fr)!important}
+    div[style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: 1.4fr 1fr 1fr 1.2fr"]{grid-template-columns:1fr!important}
+  }
+  @view-transition{navigation:auto}
+  ::view-transition-group(site-nav){animation:none}
+  ::view-transition-old(site-nav),::view-transition-new(site-nav){animation:none}
+  ::view-transition-old(root){animation:none;opacity:0}
+  ::view-transition-new(root){animation:vtFade 180ms ease-out}
+  @keyframes vtFade{from{opacity:0.55}to{opacity:1}}
+  @keyframes pageRise{from{opacity:0;transform:translateY(38px)}to{opacity:1;transform:translateY(0)}}</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; flex-direction: column">
+  <dc-import name="SiteNav" theme="white" active="insights" hint-size="100%,113px"></dc-import>
+
+  <div style="background: var(--ink-900); background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27160%27%20height%3D%27160%27%20viewBox%3D%270%200%20160%20160%27%3E%3Cg%20transform%3D%27translate%2820%2C18%29%27%20fill%3D%27none%27%20stroke%3D%27%23BA9440%27%20stroke-opacity%3D%270.35%27%20stroke-width%3D%271.6%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M20%204v32%27%2F%3E%3Cpath%20d%3D%27M8%2036h24%27%2F%3E%3Cpath%20d%3D%27M6%2010h28%27%2F%3E%3Cpath%20d%3D%27M6%2010l-5%2012a6%205%200%200%200%2010%200z%27%2F%3E%3Cpath%20d%3D%27M34%2010l-5%2012a6%205%200%200%200%2010%200z%27%2F%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%274%27%20r%3D%271.6%27%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%27translate%28100%2C98%29%27%20fill%3D%27none%27%20stroke%3D%27%23BA9440%27%20stroke-opacity%3D%270.35%27%20stroke-width%3D%271.6%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M20%204v32%27%2F%3E%3Cpath%20d%3D%27M8%2036h24%27%2F%3E%3Cpath%20d%3D%27M6%2010h28%27%2F%3E%3Cpath%20d%3D%27M6%2010l-5%2012a6%205%200%200%200%2010%200z%27%2F%3E%3Cpath%20d%3D%27M34%2010l-5%2012a6%205%200%200%200%2010%200z%27%2F%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%274%27%20r%3D%271.6%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E'); background-size: 160px 160px;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 64px 24px 56px">
+      <div style="animation: pageRise 1300ms cubic-bezier(0.16,1,0.3,1) 100ms both; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brass-300)">Insights</div>
+      <h1 style="animation: pageRise 1300ms cubic-bezier(0.16,1,0.3,1) 350ms both; font-family: var(--font-display); font-size: 48px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; margin: 16px 0 0; color: var(--paper-0); max-width: 760px">Worth reading</h1>
+      <p style="animation: pageRise 1300ms cubic-bezier(0.16,1,0.3,1) 600ms both; font-size: 17px; line-height: 1.65; color: var(--ink-300); margin: 18px 0 0; max-width: 640px">Recent legal developments relevant to Ohio businesses, curated from trusted sources — plus the firm's own publications.</p>
+    </div>
+  </div>
+
+  <div style="max-width: 1240px; margin: 0 auto; padding: 64px 24px 40px; width: 100%; box-sizing: border-box; flex: 1">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px">
+      <sc-for list="{{ articles }}" as="a" hint-placeholder-count="6">
+        <a href="{{ a.href }}" target="_blank" rel="noopener" style="display: flex; flex-direction: column; border: 1px solid var(--ink-100); border-radius: 14px; padding: 28px; text-decoration: none; transition: box-shadow 150ms ease, transform 150ms ease" style-hover="box-shadow: 0 2px 6px rgba(0,0,0,0.04), 0 6px 16px rgba(0,0,0,0.08); transform: translateY(-2px)">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+            <span style="font-size: 12px; font-weight: 600; color: var(--navy-700); background: var(--paper-50); border: 1px solid var(--ink-100); border-radius: 9999px; padding: 4px 12px">{{ a.tag }}</span>
+            <span style="font-size: 13px; color: var(--ink-300)">{{ a.date }}</span>
+          </div>
+          <div style="font-family: var(--font-display); font-size: 19px; font-weight: 700; line-height: 1.3; color: var(--ink-900); margin-top: 18px">{{ a.title }}</div>
+          <div style="font-size: 14px; line-height: 1.6; color: var(--ink-500); margin-top: 10px; flex: 1">{{ a.excerpt }}</div>
+          <div style="display: flex; align-items: center; gap: 8px; margin-top: 18px">
+            <span style="font-size: 13px; font-weight: 600; color: var(--ink-500)">{{ a.source }}</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--navy-700)"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+    <p style="font-size: 13px; line-height: 1.6; color: var(--ink-300); margin: 24px 0 0">Links open external sites. Provided for general information only — not legal advice.</p>
+  </div>
+
+  <div style="border-top: 1px solid var(--ink-100)">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 48px 24px 72px; width: 100%; box-sizing: border-box">
+      <h2 style="font-family: var(--font-display); font-size: 26px; font-weight: 700; letter-spacing: -0.01em; margin: 0; color: var(--ink-900)">Firm publications</h2>
+      <p style="font-size: 14px; color: var(--ink-500); margin: 8px 0 0">Selected articles by Doug Mansfield in LJN's Franchising Business &amp; Law Alert.</p>
+      <div style="display: flex; flex-direction: column; margin-top: 16px; max-width: 860px">
+        <sc-for list="{{ publications }}" as="p" hint-placeholder-count="4">
+          <div style="display: flex; gap: 20px; padding: 14px 0; border-bottom: 1px solid var(--ink-100)">
+            <span style="font-size: 13px; color: var(--ink-300); white-space: nowrap; min-width: 92px; padding-top: 2px">{{ p.date }}</span>
+            <span style="font-size: 15px; line-height: 1.6; color: var(--ink-700)">{{ p.title }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      articles: [
+        { tag: 'Labor & Employment', date: 'Jul 2026', source: 'Foley & Lardner', href: 'https://www.foley.com/insights/publications/2026/07/122871/', title: 'Noncompete agreements in 2026: a federal and state overview', excerpt: 'With the federal ban stalled and state laws expanding rapidly, a clear map of where noncompete law stands today.' },
+        { tag: 'Labor & Employment', date: 'Apr 2026', source: 'McDermott', href: 'https://www.mcdermottlaw.com/insights/ftc-noncompetes-employers-2026/', title: 'The FTC\u2019s strategy on noncompetes: what employers should know', excerpt: 'The rule is gone, but the agency is pursuing targeted, case-by-case enforcement — what the consent orders signal.' },
+        { tag: 'Labor & Employment', date: 'Apr 2026', source: 'FTC.gov', href: 'https://www.ftc.gov/legal-library/browse/rules/noncompete-rule', title: 'The Noncompete Rule: official record and current status', excerpt: 'The FTC\u2019s own docket — from the 2024 final rule through its removal from federal regulations in 2026.' },
+        { tag: 'Corporate Compliance', date: 'Ongoing', source: 'Morgan Lewis', href: 'https://www.morganlewis.com/topics/us-corporate-transparency-act', title: 'Corporate Transparency Act: insights and developments', excerpt: 'A running collection of updates on beneficial ownership reporting as FinCEN\u2019s rules continue to shift.' },
+        { tag: 'Corporate Compliance', date: 'Dec 2025', source: 'Procopio', href: 'https://www.procopio.com/resource/latest-cta-update', title: 'Latest CTA guidance: domestic exemption in place, state rules still apply', excerpt: 'Where beneficial ownership reporting stands for U.S. entities — and why state-level rules still matter.' },
+        { tag: 'Business Counseling', date: 'Dec 2025', source: 'U.S. Chamber', href: 'https://www.uschamber.com/co/start/strategy/small-business-corporate-transparency-act', title: 'The Corporate Transparency Act: what small businesses need to know', excerpt: 'A plain-language overview of reporting obligations, update triggers, and common owner misconceptions.' }
+      ],
+      publications: [
+        { date: 'Oct 2011', title: 'Federal Court Awards Preliminary Injunction Against Terminated Franchisee — LJN\u2019s Franchising Business & Law Alert, Vol. 18, No. 1' },
+        { date: 'Dec 2009', title: 'Appellate Court Declines Look at Subjective \u2018Good Faith\u2019 in Contract — LJN\u2019s Franchising Business & Law Alert, Vol. 16, No. 3' },
+        { date: 'Jun 2009', title: 'MO Supreme Court Denies Auto Dealer\u2019s \u2018Bad Faith\u2019 Statutory Claim — LJN\u2019s Franchising Business & Law Alert, Vol. 15, No. 9' },
+        { date: 'Feb 2009', title: 'Contributor, How to Fix the U.S. Auto Industry: A Dealership Perspective — Franchising Business & Law Alert, Vol. 15, No. 5' },
+        { date: 'Dec 2008', title: 'Appellate Court Says Waiver Enforceable, Notwithstanding Statute — Franchising Business & Law Alert, Vol. 15, No. 3' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0e0e10"/><text x="50" y="58" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">LMNG</text></svg></template>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="lmng-styles.css">
+  <script src="lmng-bundle.js"></script>
+  <style>body{margin:0;background:var(--paper-0);font-family:var(--font-body);color:var(--ink-900)} a{color:var(--navy-700)} a:hover{color:var(--navy-900)}
+  @media (max-width: 980px){
+    nav{display:none!important}
+    div[style*="flex: 0 1 180px"]{display:none!important}
+  }
+  @media (max-width: 900px){
+    h1{font-size:36px!important}
+    div[style*="grid-template-columns: repeat(4, 1fr)"]{grid-template-columns:repeat(2,1fr)!important}
+    div[style*="grid-template-columns: repeat(3, 1fr)"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: repeat(6, 1fr)"]{grid-template-columns:repeat(3,1fr)!important}
+    div[style*="grid-template-columns: 1fr 340px"],div[style*="grid-template-columns: 1fr 360px"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: 320px 1fr"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: 1.15fr 1fr"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: 1.4fr 1fr 1fr 1.2fr"]{grid-template-columns:1fr 1fr!important}
+    div[style*="position: sticky; top: 130px"],div[style*="position: sticky; top: 100px"]{position:static!important}
+    h1 span{animation:none!important;opacity:1!important;transform:none!important}
+  }
+  @media (max-width: 640px){
+    h1{font-size:30px!important}
+    div[style*="grid-template-columns: repeat(6, 1fr)"]{grid-template-columns:repeat(2,1fr)!important}
+    div[style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: 1.4fr 1fr 1fr 1.2fr"]{grid-template-columns:1fr!important}
+  }
+  @view-transition{navigation:auto}
+  ::view-transition-group(site-nav){animation:none}
+  ::view-transition-old(site-nav),::view-transition-new(site-nav){animation:none}
+  ::view-transition-old(root){animation:none;opacity:0}
+  ::view-transition-new(root){animation:vtFade 180ms ease-out}
+  @keyframes vtFade{from{opacity:0.55}to{opacity:1}}
+  @keyframes pageRise{from{opacity:0;transform:translateY(38px)}to{opacity:1;transform:translateY(0)}}</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; flex-direction: column">
+  <dc-import name="SiteNav" theme="white" active="attorneys" hint-size="100%,113px"></dc-import>
+
+  <div style="background: var(--paper-50); border-bottom: 1px solid var(--ink-100)">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 40px 24px 48px">
+      <div style="font-size: 13px; color: var(--ink-500)"><a href="home.dc.html" style="color: var(--ink-500); text-decoration: none" style-hover="color: var(--ink-900)">Home</a> &nbsp;/&nbsp; <a href="attorneys.dc.html" style="color: var(--ink-500); text-decoration: none" style-hover="color: var(--ink-900)">Attorneys</a> &nbsp;/&nbsp; <span style="color: var(--ink-900)">{{ name }}</span></div>
+      <div style="animation: pageRise 1300ms cubic-bezier(0.16,1,0.3,1) 100ms both; display: flex; align-items: center; gap: 28px; margin-top: 26px">
+        <div style="width: 110px; height: 110px; border-radius: 9999px; background: var(--paper-100); border: 1px solid var(--ink-100); display: flex; align-items: center; justify-content: center; flex: none; position: relative; overflow: hidden">
+          <span style="font-family: var(--font-display); font-size: 36px; font-weight: 700; color: var(--ink-300)">{{ initials }}</span>
+          <div style="position: absolute; inset: 0; background-image: {{ photoBg }}; background-size: cover; background-position: center 15%"></div>
+        </div>
+        <div>
+          <h1 style="font-family: var(--font-display); font-size: 42px; font-weight: 700; letter-spacing: -0.02em; margin: 0; color: var(--ink-900)">{{ name }}</h1>
+          <div style="display: flex; align-items: center; gap: 12px; margin-top: 10px; flex-wrap: wrap">
+            <span style="font-size: 13px; font-weight: 600; color: var(--navy-700); background: var(--paper-0); border: 1px solid var(--ink-100); border-radius: 9999px; padding: 5px 14px">{{ role }}</span>
+            <span style="font-size: 14px; color: var(--ink-500)">{{ focus }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width: 1240px; margin: 0 auto; padding: 56px 24px 80px; width: 100%; box-sizing: border-box; display: grid; grid-template-columns: 1fr 340px; gap: 64px; align-items: start">
+    <div>
+      <sc-for list="{{ paragraphs }}" as="p" hint-placeholder-count="3">
+        <p style="font-size: 17px; line-height: 1.75; color: var(--ink-700); margin: 0 0 18px">{{ p }}</p>
+      </sc-for>
+      <sc-for list="{{ sections }}" as="sec" hint-placeholder-count="4">
+        <div style="margin-top: 40px">
+          <h2 style="font-family: var(--font-display); font-size: 22px; font-weight: 700; letter-spacing: -0.01em; margin: 0; color: var(--ink-900)">{{ sec.title }}</h2>
+          <div style="display: flex; flex-direction: column; margin-top: 6px">
+            <sc-for list="{{ sec.items }}" as="it" hint-placeholder-count="4">
+              <div style="display: flex; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--ink-100)">
+                <span style="width: 6px; height: 6px; border-radius: 9999px; background: var(--brass-500); flex: none; margin-top: 8px"></span>
+                <span style="font-size: 15px; line-height: 1.6; color: var(--ink-700)">{{ it }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="position: sticky; top: 130px; border: 1px solid var(--ink-100); border-radius: 14px; padding: 28px; box-shadow: 0 2px 6px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.06)">
+      <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brass-700)">Contact {{ firstName }}</div>
+      <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 18px">
+        <div>
+          <div style="font-size: 12px; font-weight: 600; color: var(--ink-500)">Phone</div>
+          <a href="{{ telHref }}" style="font-size: 16px; font-weight: 500; color: var(--ink-900); text-decoration: none" style-hover="color: var(--navy-700)">{{ phone }}</a>
+        </div>
+        <div>
+          <div style="font-size: 12px; font-weight: 600; color: var(--ink-500)">Email</div>
+          <a href="{{ mailHref }}" style="font-size: 16px; font-weight: 500; text-decoration: none">{{ email }}</a>
+        </div>
+        <sc-if value="{{ linkedin }}" hint-placeholder-val="{{ false }}">
+          <div>
+            <div style="font-size: 12px; font-weight: 600; color: var(--ink-500)">LinkedIn</div>
+            <a href="{{ linkedin }}" target="_blank" style="font-size: 16px; font-weight: 500; text-decoration: none">View profile</a>
+          </div>
+        </sc-if>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 24px">
+        <a href="contact.dc.html" style="display: block; text-align: center; background: var(--navy-700); color: var(--paper-0); border-radius: 9999px; padding: 14px 24px; font-size: 15px; font-weight: 600; text-decoration: none" style-hover="background: var(--navy-900)">Schedule a consultation</a>
+        <a href="attorneys.dc.html" style="display: block; text-align: center; border: 1px solid var(--ink-200); color: var(--ink-900); border-radius: 9999px; padding: 13px 24px; font-size: 15px; font-weight: 600; text-decoration: none" style-hover="background: var(--paper-50)">All attorneys</a>
+      </div>
+    </div>
+  </div>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  data() {
+    return {
+      'rodd-b-lape': {
+        name: 'Rodd B. Lape', role: 'Partner', initials: 'RL', photo: 'https://lmng-law.com/wp-content/uploads/2016/06/Lapp.jpg', focus: 'Business Transactions · Corporate Counseling · Outside General Counsel',
+        phone: '614.763.2315', email: 'rlape@lmng-law.com', linkedin: 'https://www.linkedin.com/in/rodd-lape-44b2b38/',
+        paragraphs: [
+          'Rodd maintains a diverse corporate practice and counsels clients on a wide range of business law matters, including mergers and acquisitions, restructurings, debt and equity financings, venture capital and private equity investments, joint ventures, strategic planning, fiduciary duties, business formation and general business counseling. He represents both buyers and sellers of businesses and has acted as the lead lawyer in scores of domestic and international M&A transactions.',
+          'In his over 25 years of practice, Rodd has advised clients ranging from start-ups and small businesses to mid-size businesses and public companies across retail, manufacturing, automotive, building products, industrial technology, commercial and professional services, training and education, publishing, insurance and telecommunications. He has also served as outside general counsel to private companies without internal legal staffs.',
+          'Rodd\u2019s experience has taught him that every client is unique and a \u201cone size fits all\u201d approach is not an effective way to deliver legal advice. Prior to founding Lape Mansfield Nakasian & Gibson, Rodd was a partner in the Columbus office of Jones Day.'
+        ],
+        sections: [
+          { title: 'Representative experience', items: [
+            'Over $2.5 billion in completed acquisitions of privately held companies in domestic and international jurisdictions for strategic and financial buyers.',
+            '$1.44 billion sale of equity stake in the Mexican subsidiary of a major Latin American mobile communication provider.',
+            '$465 million sale of substantially all assets of a Tier 1 automotive supplier pursuant to a highly contested Section 363 bankruptcy sale.',
+            '$2.5 billion long-term rail transportation agreement for a major utility company.',
+            'Counseled boards of directors, special committees and senior management on corporate governance and fiduciary duties.'
+          ]},
+          { title: 'Education', items: [
+            'J.D., The Ohio State University Michael E. Moritz College of Law, 1996 — Summa Cum Laude, Order of the Coif, Ohio State Law Journal',
+            'B.A. in History, The Ohio State University, 1991 — Summa Cum Laude with Honors, Phi Beta Kappa'
+          ]},
+          { title: 'Memberships & affiliations', items: ['American Bar Association', 'Ohio State Bar Association', 'Columbus Bar Association', 'Association for Corporate Growth'] },
+          { title: 'Bar admissions', items: ['Ohio'] }
+        ]
+      },
+      'douglas-m-mansfield': {
+        name: 'Douglas M. Mansfield', role: 'Partner', initials: 'DM', photo: 'https://lmng-law.com/wp-content/uploads/2016/06/Mansfield.jpg', focus: 'Litigation · Arbitration · Complex Commercial Disputes',
+        phone: '614.763.2316', email: 'dmansfield@lmng-law.com', linkedin: '',
+        paragraphs: [
+          'Doug Mansfield is a trial lawyer with a nationwide litigation and arbitration practice and nearly three decades of experience handling complex commercial disputes. He has tried cases before state and federal courts, state administrative agencies, self-regulating organizations and arbitration tribunals around the country, and has argued appeals before multiple federal circuit courts as well as state courts.',
+          'Doug\u2019s experience spans automotive, insurance, food, manufacturing, agricultural, telecommunications, broker-dealer, banking, health care, real estate and construction — with disputes ranging from complex litigation to securities arbitration and SEC administrative proceedings, distributor and franchise terminations, trade secrets, non-compete matters, government investigations and white collar criminal proceedings.',
+          'Before pursuing a career in law, Doug was a securities analyst for SBCI Securities Asia in Tokyo and a writer and editor for IR Japan. He spent four years in the U.S. Army as a Chinese linguist and is proficient in Mandarin Chinese and Japanese. Prior to founding Lape Mansfield Nakasian & Gibson, Doug was a partner in the Columbus office of Jones Day.'
+        ],
+        sections: [
+          { title: 'Representative experience', items: [
+            'Represented General Motors in its national defense of hundreds of arbitrations by dealers seeking reinstatement of their franchises following GM\u2019s bankruptcy.',
+            'Represented American Electric Power in a multimillion-dollar dispute involving termination of derivatives contracts under an ISDA master agreement with the Bank of Montreal.',
+            'Represented several Japanese auto parts manufacturers in federal criminal antitrust proceedings brought by the U.S. Department of Justice.',
+            'Represented the Belgian bank KBC, N.V. in an action seeking foreclosure and the appointment of a receiver in a large commercial project.',
+            'Represented First American Title Insurance Company in a putative class action in Illinois federal court.',
+            'Represented the motorsports division of GM in a dispute with a promoter over sponsorships of NASCAR racing teams.'
+          ]},
+          { title: 'Education', items: ['J.D., University of Cincinnati College of Law, 1994', 'B.A. in International Relations, Stanford University, 1988'] },
+          { title: 'Memberships & affiliations', items: ['Ohio State Bar Association', 'Columbus Bar Association', 'Ohio Super Lawyers'] },
+          { title: 'Bar admissions', items: ['Ohio', 'U.S. Court of Appeals for the Sixth Circuit', 'U.S. District Court for the Northern District of Ohio', 'U.S. District Court for the Southern District of Ohio'] }
+        ]
+      },
+      'william-e-nakasian': {
+        name: 'William E. Nakasian', role: 'Partner', initials: 'WN', photo: 'https://lmng-law.com/wp-content/uploads/2016/06/WEN.jpg', focus: 'Real Estate · Finance · Commercial Transactions',
+        phone: '614.763.2314', email: 'wenakasian@lmng-law.com', linkedin: 'https://www.linkedin.com/in/bill-nakasian-7045348/',
+        paragraphs: [
+          'Bill Nakasian advises corporations, developers, equity investors and large private equity real estate funds on all aspects of commercial and real estate transactions, including acquisitions and dispositions, the structuring of complex joint ventures, lending and finance (including senior and mezzanine financings), commercial leasing of all types, public/private partnerships and economic incentive programs. Bill has extensive experience with sale-leaseback and lease-leaseback transactions, Section 1031 transactions and other tax-incentivized transactions.',
+          'Bill is focused on understanding his clients\u2019 businesses and offering strategic, practical advice that helps them attain their goals. He has a proven track record of helping clients in a wide variety of businesses achieve greater profitability, and is passionate about providing advice on a value-added basis that fosters long-term relationships.'
+        ],
+        sections: [
+          { title: 'Representative experience', items: [
+            'Represented CalEast Industrial Investors over a 10-year period, including the $1.4 billion sale of its core portfolio — more than 21 million square feet of industrial buildings in 18 cities.',
+            'Represented Nationwide Realty Investors in the acquisition, disposition, development, leasing and financing of multi-family, commercial and retail projects.',
+            'Represented Capitol Square, Ltd. in all aspects of its real estate investments, including joint ventures, public/private partnerships and Section 1031 exchanges.',
+            'Represented one of the country\u2019s largest financial institutions in nationwide portfolio sale-leaseback transactions involving more than 100 properties and 19 million square feet.',
+            'Represented Sprint Nextel in a sale-leaseback of more than 3,000 cell tower sites across the country.'
+          ]},
+          { title: 'Education', items: ['J.D., with Honors, The Ohio State University Michael E. Moritz College of Law, 1990', 'B.S. in Accounting, Case Western Reserve University, 1987'] },
+          { title: 'Memberships & affiliations', items: ['Ohio State Bar Association', 'Columbus Bar Association', 'Best Lawyers in America (2008–2012)', 'Ohio Super Lawyers (2007–2011)'] },
+          { title: 'Bar admissions', items: ['Ohio'] }
+        ]
+      },
+      'rick-j-gibson': {
+        name: 'Rick J. Gibson', role: 'Partner', initials: 'RG', focus: 'M&A · Financings · Tower Transactions · Franchising',
+        phone: '614.763.2240', email: 'rjgibson@lmng-law.com', linkedin: 'https://www.linkedin.com/in/rick-gibson-98784b8/',
+        paragraphs: [
+          'During his twenty years as a corporate lawyer, Rick Gibson has served as primary legal advisor on a variety of domestic and international business transactions, with a focus on mergers and acquisitions, financings (including credit agreements and equipment leasing), cell tower transactions, franchising, joint ventures, and corporate governance. He represents entrepreneurs, small businesses, and public and private companies across automotive, consumer product, equipment rental, franchising, insurance, restaurant, retail and telecommunications.',
+          'Prior to becoming a lawyer, Rick worked in his family\u2019s business for many years, giving him first-hand experience with the real-world issues businesses face. Rick and his wife Beth founded Buddy Up Tennis, a non-profit providing a tennis and fitness program for individuals with Down Syndrome in seventeen cities and nine states.'
+        ],
+        sections: [
+          { title: 'Representative experience', items: [
+            'T-Mobile\u2019s $2.4 billion monetization of over 7,000 towers with Crown Castle.',
+            'Aspects of Verizon\u2019s $5.0 billion monetization of over 11,000 towers with American Tower Corporation.',
+            'Sale of BR Towers, SA (Brazil) — over 4,500 towers — for approximately $1.0 billion.',
+            'Acquisition of approximately $1.0 billion of cellular spectrum for a U.S.-based carrier.',
+            'Master franchise agreement for the development and operation of Panda Express restaurants throughout Mexico.',
+            'Consolidation and roll-up of NationsRent (n/k/a Sunbelt Rentals), involving dozens of equipment rental businesses.',
+            'More than $500 million of equipment lease financings across a variety of asset classes.'
+          ]},
+          { title: 'Education', items: [
+            'J.D., magna cum laude, University of Pittsburgh, 1996 — Order of the Coif; Articles Editor, Pittsburgh Law Review',
+            'M.B.A. (Finance), Loyola University of Chicago, 1994',
+            'B.B.A., magna cum laude (Information Systems), Loyola University of Chicago, 1991'
+          ]},
+          { title: 'Memberships & affiliations', items: ['American Bar Association — Business Law and Legal Opinion Sections', 'Ohio State Bar Association', 'Columbus Bar Association'] },
+          { title: 'Bar admissions', items: ['New York', 'Ohio'] }
+        ]
+      },
+      'dan-t-carter': {
+        name: 'Dan T. Carter', role: 'Of Counsel', initials: 'DC', photo: 'https://lmng-law.com/wp-content/uploads/2017/12/DTC5-e1516128777193.jpg', focus: 'Labor & Employment · Workplace Safety · Traditional Labor',
+        phone: '614.737.3400', email: 'dcarter@lmng-law.com', linkedin: '',
+        paragraphs: [
+          'Dan maintains a broad practice covering all aspects of labor and employment law. For over 30 years he has counseled clients on federal and state employment laws, wage and hour laws, OSHA workplace safety, workforce restructurings and reductions in force, and compliance with disability accommodation, non-discrimination and family and medical leave requirements. His traditional labor practice includes collective bargaining, grievance resolution, arbitrations, strikes, union avoidance and defense of unfair labor practice cases.',
+          'Dan has tried and litigated numerous employment cases arising under Title VII, the ADA, ADEA, FMLA, FLSA, OSHA and state law, and has defended government contractors in workplace investigations and claims under government contracting laws. He has also handled labor, employment and benefits issues in several hundred acquisition, disposition and merger transactions.',
+          'Prior to Lape Mansfield Nakasian & Gibson, Dan was a partner in the Cleveland and Atlanta offices of Jones Day and, before that, a partner at Smith, Currie & Hancock LLP in Atlanta. Dan is fluent in Spanish.'
+        ],
+        sections: [
+          { title: 'Representative experience', items: [
+            'Defense verdict in a federal court jury trial alleging sexual harassment, negligent retention, intentional infliction of emotional distress and sex discrimination.',
+            'Denial of class certification in a nationwide wage and hour class/collective action.',
+            'Defense of numerous OSHA workplace fatality investigations.',
+            'Multiple internal investigations involving C-suite executives.',
+            'Successful defense of a federal government contractor in a federal debarment trial.',
+            'Union organizing campaign involving 5,000 employees in the textile industry.'
+          ]},
+          { title: 'Education', items: ['J.D., Vanderbilt University, 1978 — Articles Editor, Law Journal', 'B.A., cum laude, Zoology and Spanish Literature, Duke University, 1975'] },
+          { title: 'Memberships & affiliations', items: ['Ohio State Bar Association', 'State Bar of Georgia', 'Legal 500', 'Chambers USA', 'Ohio and Georgia Super Lawyer'] },
+          { title: 'Bar admissions', items: ['Georgia and Ohio', 'Federal and state courts in Georgia and Ohio'] }
+        ]
+      },
+      'sarah-paynter': {
+        name: 'Sarah Paynter', role: 'Counsel', initials: 'SP', photo: 'https://lmng-law.com/wp-content/uploads/2016/06/SMP-1-e1513007141422.jpg', focus: 'Corporate · M&A · Business Counseling',
+        phone: '614.763.6550', email: 'spaynter@lmng-law.com', linkedin: 'https://www.linkedin.com/in/sarah-paynter-2130a278/',
+        paragraphs: [
+          'Sarah maintains a diverse corporate practice. She counsels clients on a wide range of business law matters, including mergers and acquisitions, dispositions, restructurings, debt and equity financings, private equity investments, joint ventures, fiduciary duties, business formation and general business counseling.',
+          'Sarah represents both buyers and sellers of businesses and has acted as the primary associate in numerous M&A transactions, advising non-profits, small and mid-sized businesses and large public companies. A Columbus native and two-time graduate of The Ohio State University, Sarah is an avid Buckeyes sports fan.'
+        ],
+        sections: [
+          { title: 'Representative experience', items: [
+            'Structured, negotiated and documented complex mergers, acquisitions, dispositions, restructurings, joint ventures and commercial transactions.',
+            'Counseled boards of directors and senior management on corporate governance issues, including directors\u2019 and officers\u2019 fiduciary duties.',
+            'Negotiated corporate and commercial transactions, including consulting, service and supply agreements.'
+          ]},
+          { title: 'Education', items: [
+            'J.D., The Ohio State University Michael E. Moritz College of Law, 2010 — Summa Cum Laude, Order of the Coif; Judicial Extern to the Hon. Edmund A. Sargus Jr., S.D. Ohio',
+            'B.A., Criminology, The Ohio State University, 2007 — Summa Cum Laude'
+          ]},
+          { title: 'Bar admissions', items: ['Ohio', 'Georgia'] }
+        ]
+      },
+      'matthew-e-nakasian': {
+        name: 'Matthew E. Nakasian', role: 'Associate', initials: 'MN', focus: 'Real Estate & Finance · Business Transactions · Litigation',
+        phone: '614.505.2299', email: 'mnakasian@lmng-law.com', linkedin: '',
+        paragraphs: [
+          'Matt maintains a broad practice spanning the firm\u2019s transactional and litigation groups, with particular emphasis on real estate and finance. He drafts and negotiates real estate purchase agreements, lease agreements and corporate documents, and assists clients in structuring their transactions from formation through closing.',
+          'Matt\u2019s litigation experience includes breach of contract and lease disputes, complaints, discovery and motion practice, as well as research and analysis in class action matters across the technology, medical and financial sectors. Before joining the firm as an associate, Matt practiced at a Columbus litigation boutique and served as a legal extern to the Honorable Edmund A. Sargus Jr. of the U.S. District Court for the Southern District of Ohio.',
+          'Matt\u2019s background in financial planning informs a practical, numbers-aware approach to legal advice. He is a graduate of The Ohio State University and earned his J.D. cum laude from the University of Pittsburgh School of Law, where he was Lead Managing Editor of the Journal of Law & Commerce.'
+        ],
+        sections: [
+          { title: 'Representative experience', items: [
+            'Drafted real estate purchase agreements, lease agreements, and amendments through commercial real estate closings, including tenant estoppel certificates, assignments and assumptions of leases, and deeds.',
+            'Drafted articles of organization, operating agreements, resolutions and other corporate formation documents.',
+            'Drafted complaints, answers, counterclaims, discovery requests and motions in breach of contract and lease disputes.',
+            'Researched and drafted legal opinions and orders as extern to Judge Edmund A. Sargus Jr., U.S. District Court, Southern District of Ohio.'
+          ]},
+          { title: 'Education', items: [
+            'J.D., cum laude, University of Pittsburgh School of Law, 2022 — Lead Managing Editor, Journal of Law & Commerce; CALI Awards in Corporate Finance and Secured Transactions; Dean\u2019s Scholarship',
+            'B.S., Consumer and Family Financial Services (Certified Financial Planning Track), The Ohio State University, 2018'
+          ]},
+          { title: 'Bar admissions', items: ['Ohio'] }
+        ]
+      }
+    };
+  }
+  renderVals() {
+    const slug = new URLSearchParams(window.location.search).get('a') || 'rodd-b-lape';
+    const all = this.data();
+    const a = all[slug] || all['rodd-b-lape'];
+    return {
+      ...a,
+      photoBg: a.photo ? "url('" + a.photo + "')" : 'none',
+      firstName: a.name.split(' ')[0],
+      telHref: 'tel:' + a.phone.replace(/\./g, ''),
+      mailHref: 'mailto:' + a.email
+    };
+  }
+}
+</script>
+</body>
+</html>

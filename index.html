@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="lmng-styles.css">
+  <script src="lmng-bundle.js"></script>
+  <style>html,body{margin:0;height:100%;background:var(--paper-0);font-family:var(--font-body)} a{color:var(--navy-700)} a:hover{color:var(--navy-900)}</style>
+</helmet>
+<div style="height: 100vh; display: flex; flex-direction: column">
+  <div style="flex: none">
+    <dc-import name="SiteNav" theme="white" active="{{ active }}" on-navigate="{{ navigate }}" hint-size="100%,113px"></dc-import>
+  </div>
+  <iframe ref="{{ frameRef }}" name="lmng-shell" src="home.dc.html" title="LMNG Law" style="flex: 1; width: 100%; border: none; display: block"></iframe>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { active: 'home' };
+  frameRef = el => {
+    if (!el || this.frame) return;
+    this.frame = el;
+    el.addEventListener('load', () => {
+      try {
+        const p = el.contentWindow.location.pathname.split('/').pop() || '';
+        const map = [
+          ['home', 'home'], ['about', 'about'], ['practice', 'practice'],
+          ['attorney', 'attorneys'], ['insights', 'insights'], ['contact', 'contact']
+        ];
+        const hit = map.find(([k]) => p.startsWith(k) || p.includes(k));
+        this.setState({ active: hit ? hit[1] : 'none' });
+      } catch (e) {}
+    });
+  };
+  renderVals() {
+    return {
+      active: this.state.active,
+      frameRef: this.frameRef,
+      navigate: href => { if (this.frame) this.frame.contentWindow.location.href = href; }
+    };
+  }
+}
+</script>
+</body>
+</html>

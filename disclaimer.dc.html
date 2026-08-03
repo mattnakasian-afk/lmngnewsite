@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0e0e10"/><text x="50" y="58" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">LMNG</text></svg></template>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="lmng-styles.css">
+  <script src="lmng-bundle.js"></script>
+  <style>body{margin:0;background:var(--paper-0);font-family:var(--font-body);color:var(--ink-900)} a{color:var(--navy-700)} a:hover{color:var(--navy-900)}
+  @media (max-width: 980px){
+    nav{display:none!important}
+    div[style*="flex: 0 1 180px"]{display:none!important}
+  }
+  @media (max-width: 900px){
+    h1{font-size:36px!important}
+    div[style*="grid-template-columns: repeat(4, 1fr)"]{grid-template-columns:repeat(2,1fr)!important}
+    div[style*="grid-template-columns: repeat(3, 1fr)"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: repeat(6, 1fr)"]{grid-template-columns:repeat(3,1fr)!important}
+    div[style*="grid-template-columns: 1fr 340px"],div[style*="grid-template-columns: 1fr 360px"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: 320px 1fr"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: 1.15fr 1fr"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: 1.4fr 1fr 1fr 1.2fr"]{grid-template-columns:1fr 1fr!important}
+    div[style*="position: sticky; top: 130px"],div[style*="position: sticky; top: 100px"]{position:static!important}
+    h1 span{animation:none!important;opacity:1!important;transform:none!important}
+  }
+  @media (max-width: 640px){
+    h1{font-size:30px!important}
+    div[style*="grid-template-columns: repeat(6, 1fr)"]{grid-template-columns:repeat(2,1fr)!important}
+    div[style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: 1.4fr 1fr 1fr 1.2fr"]{grid-template-columns:1fr!important}
+  }
+  @view-transition{navigation:auto}
+  ::view-transition-group(site-nav){animation:none}
+  ::view-transition-old(site-nav),::view-transition-new(site-nav){animation:none}
+  ::view-transition-old(root){animation:none;opacity:0}
+  ::view-transition-new(root){animation:vtFade 180ms ease-out}
+  @keyframes vtFade{from{opacity:0.55}to{opacity:1}}
+  @keyframes pageRise{from{opacity:0;transform:translateY(38px)}to{opacity:1;transform:translateY(0)}}</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; flex-direction: column">
+  <dc-import name="SiteNav" theme="white" active="none" hint-size="100%,113px"></dc-import>
+
+  <div style="background: var(--paper-50); border-bottom: 1px solid var(--ink-100)">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 56px 24px 48px">
+      <div style="animation: pageRise 1300ms cubic-bezier(0.16,1,0.3,1) 100ms both; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brass-700)">Legal notice</div>
+      <h1 style="animation: pageRise 1300ms cubic-bezier(0.16,1,0.3,1) 350ms both; font-family: var(--font-display); font-size: 48px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; margin: 14px 0 0; color: var(--ink-900)">Disclaimer</h1>
+    </div>
+  </div>
+
+  <div style="max-width: 860px; margin: 0 auto; padding: 56px 24px 88px; width: 100%; box-sizing: border-box; flex: 1">
+    <div style="display: flex; flex-direction: column; gap: 28px">
+      <div>
+        <h2 style="font-family: var(--font-display); font-size: 20px; font-weight: 700; margin: 0; color: var(--ink-900)">No legal advice</h2>
+        <p style="font-size: 15.5px; line-height: 1.75; color: var(--ink-700); margin: 10px 0 0">The materials on this website are provided by Lape Mansfield Nakasian &amp; Gibson, LLC for general informational purposes only. They do not constitute legal advice and are not a substitute for advice from a qualified attorney regarding your specific circumstances. You should not act, or refrain from acting, on the basis of anything on this site without seeking appropriate legal counsel.</p>
+      </div>
+      <div>
+        <h2 style="font-family: var(--font-display); font-size: 20px; font-weight: 700; margin: 0; color: var(--ink-900)">No attorney-client relationship</h2>
+        <p style="font-size: 15.5px; line-height: 1.75; color: var(--ink-700); margin: 10px 0 0">Viewing this website, submitting an inquiry through it, or communicating with the firm by email does not create an attorney-client relationship. An attorney-client relationship is formed only when both you and the firm have signed a written engagement agreement. Until that time, please do not send us confidential or time-sensitive information.</p>
+      </div>
+      <div>
+        <h2 style="font-family: var(--font-display); font-size: 20px; font-weight: 700; margin: 0; color: var(--ink-900)">No guarantee of results</h2>
+        <p style="font-size: 15.5px; line-height: 1.75; color: var(--ink-700); margin: 10px 0 0">Descriptions of prior matters and representative experience are provided for informational purposes only. Past results do not guarantee or predict a similar outcome in any future matter. Every legal matter is different and outcomes depend on each matter's specific facts and circumstances.</p>
+      </div>
+      <div>
+        <h2 style="font-family: var(--font-display); font-size: 20px; font-weight: 700; margin: 0; color: var(--ink-900)">Attorney advertising</h2>
+        <p style="font-size: 15.5px; line-height: 1.75; color: var(--ink-700); margin: 10px 0 0">This website may be considered attorney advertising under the rules of professional conduct of certain jurisdictions. The attorney responsible for this website is Lape Mansfield Nakasian &amp; Gibson, LLC, 9980 Brewster Lane, Suite 150, Powell, Ohio 43065.</p>
+      </div>
+      <div>
+        <h2 style="font-family: var(--font-display); font-size: 20px; font-weight: 700; margin: 0; color: var(--ink-900)">External links</h2>
+        <p style="font-size: 15.5px; line-height: 1.75; color: var(--ink-700); margin: 10px 0 0">Links to third-party websites, including articles under Insights, are provided for convenience only. The firm does not endorse and is not responsible for the content of any linked site.</p>
+      </div>
+    </div>
+  </div>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>

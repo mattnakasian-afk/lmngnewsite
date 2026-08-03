@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0e0e10"/><text x="50" y="58" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">LMNG</text></svg></template>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="lmng-styles.css">
+  <script src="lmng-bundle.js"></script>
+  <style>body{margin:0;background:var(--paper-0);font-family:var(--font-body);color:var(--ink-900)} a{color:var(--navy-700)} a:hover{color:var(--navy-900)}
+  @media (max-width: 980px){
+    nav{display:none!important}
+    div[style*="flex: 0 1 180px"]{display:none!important}
+  }
+  @media (max-width: 900px){
+    h1{font-size:36px!important}
+    div[style*="grid-template-columns: repeat(4, 1fr)"]{grid-template-columns:repeat(2,1fr)!important}
+    div[style*="grid-template-columns: repeat(3, 1fr)"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: repeat(6, 1fr)"]{grid-template-columns:repeat(3,1fr)!important}
+    div[style*="grid-template-columns: 1fr 340px"],div[style*="grid-template-columns: 1fr 360px"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: 320px 1fr"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: 1.15fr 1fr"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: 1.4fr 1fr 1fr 1.2fr"]{grid-template-columns:1fr 1fr!important}
+    div[style*="position: sticky; top: 130px"],div[style*="position: sticky; top: 100px"]{position:static!important}
+    h1 span{animation:none!important;opacity:1!important;transform:none!important}
+  }
+  @media (max-width: 640px){
+    h1{font-size:30px!important}
+    div[style*="grid-template-columns: repeat(6, 1fr)"]{grid-template-columns:repeat(2,1fr)!important}
+    div[style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: 1.4fr 1fr 1fr 1.2fr"]{grid-template-columns:1fr!important}
+  }
+  @view-transition{navigation:auto}
+  ::view-transition-group(site-nav){animation:none}
+  ::view-transition-old(site-nav),::view-transition-new(site-nav){animation:none}
+  ::view-transition-old(root){animation:none;opacity:0}
+  ::view-transition-new(root){animation:vtFade 180ms ease-out}
+  @keyframes vtFade{from{opacity:0.55}to{opacity:1}}
+  @keyframes pageRise{from{opacity:0;transform:translateY(38px)}to{opacity:1;transform:translateY(0)}}</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; flex-direction: column">
+  <dc-import name="SiteNav" theme="white" active="about" hint-size="100%,113px"></dc-import>
+
+  <div style="background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27160%27%20height%3D%27160%27%20viewBox%3D%270%200%20160%20160%27%3E%3Cg%20transform%3D%27translate%2820%2C18%29%27%20fill%3D%27none%27%20stroke%3D%27%239A7A2E%27%20stroke-opacity%3D%270.18%27%20stroke-width%3D%271.6%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M20%204v32%27%2F%3E%3Cpath%20d%3D%27M8%2036h24%27%2F%3E%3Cpath%20d%3D%27M6%2010h28%27%2F%3E%3Cpath%20d%3D%27M6%2010l-5%2012a6%205%200%200%200%2010%200z%27%2F%3E%3Cpath%20d%3D%27M34%2010l-5%2012a6%205%200%200%200%2010%200z%27%2F%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%274%27%20r%3D%271.6%27%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%27translate%28100%2C98%29%27%20fill%3D%27none%27%20stroke%3D%27%239A7A2E%27%20stroke-opacity%3D%270.18%27%20stroke-width%3D%271.6%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M20%204v32%27%2F%3E%3Cpath%20d%3D%27M8%2036h24%27%2F%3E%3Cpath%20d%3D%27M6%2010h28%27%2F%3E%3Cpath%20d%3D%27M6%2010l-5%2012a6%205%200%200%200%2010%200z%27%2F%3E%3Cpath%20d%3D%27M34%2010l-5%2012a6%205%200%200%200%2010%200z%27%2F%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%274%27%20r%3D%271.6%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E'); background-size: 160px 160px">
+  <div style="max-width: 1240px; margin: 0 auto; padding: 88px 24px 72px; width: 100%; box-sizing: border-box">
+    <div style="animation: pageRise 1300ms cubic-bezier(0.16,1,0.3,1) 100ms both; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brass-700)">About the firm</div>
+    <h1 style="animation: pageRise 1300ms cubic-bezier(0.16,1,0.3,1) 350ms both; font-family: var(--font-display); font-size: 56px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.08; margin: 18px 0 0; color: var(--ink-900); max-width: 860px">Major-firm expertise. A boutique's flexibility and access.</h1>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 48px">
+      <p style="font-size: 18px; line-height: 1.75; color: var(--ink-700); margin: 0">Our firm was founded in 2012 by former partners from Jones Day, one of the nation's premier law firms, to provide top-quality work in an intimate, relationship-oriented environment. With the expertise and business perspective gained from decades at one of the country's largest firms, we work with a diverse range of clients — corporations, closely held companies, partnerships, LLCs, and the individuals who own them.</p>
+      <p style="font-size: 18px; line-height: 1.75; color: var(--ink-700); margin: 0">We have practiced together for a long time, and we value that partnership. In a boutique practice like ours, we can be more flexible, less bureaucratic, and highly accessible to our clients — while providing major-firm expertise. Our primary focus is partnering with clients to understand their needs, so we function as key advisors to their businesses.</p>
+    </div>
+  </div>
+  </div>
+
+  <div style="border-radius: 20px; overflow: hidden; max-width: 1192px; margin: 0 auto; width: calc(100% - 48px)">
+    <div style="aspect-ratio: 21 / 8; background-image: url('hero-3.jpg'); background-size: cover; background-position: center 60%"></div>
+  </div>
+
+  <div style="max-width: 1240px; margin: 0 auto; padding: 80px 24px; width: 100%; box-sizing: border-box">
+    <h2 style="font-family: var(--font-display); font-size: 34px; font-weight: 700; letter-spacing: -0.02em; margin: 0; color: var(--ink-900)">What we're dedicated to</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 36px">
+      <div style="border: 1px solid var(--ink-100); border-radius: 14px; padding: 32px">
+        <div style="font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--ink-900)">Excellence</div>
+        <p style="font-size: 15px; line-height: 1.65; color: var(--ink-500); margin: 10px 0 0">The highest quality of legal services — practical, effective solutions from the simplest matters to the most complex.</p>
+      </div>
+      <div style="border: 1px solid var(--ink-100); border-radius: 14px; padding: 32px">
+        <div style="font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--ink-900)">Ethics</div>
+        <p style="font-size: 15px; line-height: 1.65; color: var(--ink-500); margin: 10px 0 0">A pragmatic approach to the practice of law, grounded in integrity and candor with every client.</p>
+      </div>
+      <div style="border: 1px solid var(--ink-100); border-radius: 14px; padding: 32px">
+        <div style="font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--ink-900)">Client service</div>
+        <p style="font-size: 15px; line-height: 1.65; color: var(--ink-500); margin: 10px 0 0">Responsive and accessible — ever-mindful of the need to be efficient and cost-effective in helping you reach your goals.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: var(--paper-50); border-top: 1px solid var(--ink-100)">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 64px 24px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px">
+      <div><div style="font-family: var(--font-display); font-size: 40px; font-weight: 700; color: var(--ink-900)">2012</div><div style="font-size: 14px; color: var(--ink-500); margin-top: 6px">Founded by former Jones Day partners</div></div>
+      <div><div style="font-family: var(--font-display); font-size: 40px; font-weight: 700; color: var(--ink-900)">100+</div><div style="font-size: 14px; color: var(--ink-500); margin-top: 6px">Years of combined experience</div></div>
+      <div><div style="font-family: var(--font-display); font-size: 40px; font-weight: 700; color: var(--ink-900)">1</div><div style="font-size: 14px; color: var(--ink-500); margin-top: 6px">Office in Powell, Ohio — serving clients well beyond it</div></div>
+    </div>
+  </div>
+
+  <div style="background: var(--navy-900)">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 64px 24px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap">
+      <h2 style="font-family: var(--font-display); font-size: 30px; font-weight: 700; letter-spacing: -0.02em; color: var(--paper-0); margin: 0">Meet the attorneys behind the firm.</h2>
+      <a href="attorneys.dc.html" style="background: var(--paper-0); color: var(--ink-900); border-radius: 9999px; padding: 16px 32px; font-size: 16px; font-weight: 600; text-decoration: none; white-space: nowrap" style-hover="background: var(--paper-100)">Our attorneys</a>
+    </div>
+  </div>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>
