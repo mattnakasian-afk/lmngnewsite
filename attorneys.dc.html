@@ -9,110 +9,110 @@
 <template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0e0e10"/><text x="50" y="58" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">LMNG</text></svg></template>
 <x-dc>
 <helmet>
-  <link rel="stylesheet" href="lmng-styles.css">
-  <script src="lmng-bundle.js"></script>
-  <style>body{margin:0;background:var(--paper-0);font-family:var(--font-body);color:var(--ink-900)} a{color:var(--navy-700)} a:hover{color:var(--navy-900)}
-  @media (max-width: 980px){
-    nav{display:none!important}
-    div[style*="flex: 0 1 180px"]{display:none!important}
-  }
-  @media (max-width: 900px){
-    h1{font-size:36px!important}
-    div[style*="grid-template-columns: repeat(4, 1fr)"]{grid-template-columns:repeat(2,1fr)!important}
-    div[style*="grid-template-columns: repeat(3, 1fr)"]{grid-template-columns:1fr!important}
-    div[style*="grid-template-columns: repeat(6, 1fr)"]{grid-template-columns:repeat(3,1fr)!important}
-    div[style*="grid-template-columns: 1fr 340px"],div[style*="grid-template-columns: 1fr 360px"]{grid-template-columns:1fr!important}
-    div[style*="grid-template-columns: 320px 1fr"]{grid-template-columns:1fr!important}
-    div[style*="grid-template-columns: 1.15fr 1fr"]{grid-template-columns:1fr!important}
-    div[style*="grid-template-columns: 1.4fr 1fr 1fr 1.2fr"]{grid-template-columns:1fr 1fr!important}
-    div[style*="position: sticky; top: 130px"],div[style*="position: sticky; top: 100px"]{position:static!important}
-    h1 span{animation:none!important;opacity:1!important;transform:none!important}
-  }
-  @media (max-width: 640px){
-    h1{font-size:30px!important}
-    div[style*="grid-template-columns: repeat(6, 1fr)"]{grid-template-columns:repeat(2,1fr)!important}
-    div[style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr!important}
-    div[style*="grid-template-columns: 1.4fr 1fr 1fr 1.2fr"]{grid-template-columns:1fr!important}
-  }
-  @view-transition{navigation:auto}
-  ::view-transition-group(site-nav){animation:none}
-  ::view-transition-old(site-nav),::view-transition-new(site-nav){animation:none}
-  ::view-transition-old(root){animation:none;opacity:0}
-  ::view-transition-new(root){animation:vtFade 180ms ease-out}
-  @keyframes vtFade{from{opacity:0.55}to{opacity:1}}
-  @keyframes pageRise{from{opacity:0;transform:translateY(38px)}to{opacity:1;transform:translateY(0)}}</style>
+<link rel="stylesheet" href="lmng-styles.css">
+<script src="lmng-bundle.js"></script>
+<style>body{margin:0;background:var(--paper-0);font-family:var(--font-body);color:var(--ink-900)} a{color:var(--navy-700)} a:hover{color:var(--navy-900)}
+@media (max-width: 980px){
+nav{display:none!important}
+div[style*="flex: 0 1 180px"]{display:none!important}
+}
+@media (max-width: 900px){
+h1{font-size:36px!important}
+div[style*="grid-template-columns: repeat(4, 1fr)"]{grid-template-columns:repeat(2,1fr)!important}
+div[style*="grid-template-columns: repeat(3, 1fr)"]{grid-template-columns:1fr!important}
+div[style*="grid-template-columns: repeat(6, 1fr)"]{grid-template-columns:repeat(3,1fr)!important}
+div[style*="grid-template-columns: 1fr 340px"],div[style*="grid-template-columns: 1fr 360px"]{grid-template-columns:1fr!important}
+div[style*="grid-template-columns: 320px 1fr"]{grid-template-columns:1fr!important}
+div[style*="grid-template-columns: 1.15fr 1fr"]{grid-template-columns:1fr!important}
+div[style*="grid-template-columns: 1.4fr 1fr 1fr 1.2fr"]{grid-template-columns:1fr 1fr!important}
+div[style*="position: sticky; top: 130px"],div[style*="position: sticky; top: 100px"]{position:static!important}
+h1 span{animation:none!important;opacity:1!important;transform:none!important}
+}
+@media (max-width: 640px){
+h1{font-size:30px!important}
+div[style*="grid-template-columns: repeat(6, 1fr)"]{grid-template-columns:repeat(2,1fr)!important}
+div[style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr!important}
+div[style*="grid-template-columns: 1.4fr 1fr 1fr 1.2fr"]{grid-template-columns:1fr!important}
+}
+@view-transition{navigation:auto}
+::view-transition-group(site-nav){animation:none}
+::view-transition-old(site-nav),::view-transition-new(site-nav){animation:none}
+::view-transition-old(root){animation:none;opacity:0}
+::view-transition-new(root){animation:vtFade 180ms ease-out}
+@keyframes vtFade{from{opacity:0.55}to{opacity:1}}
+@keyframes pageRise{from{opacity:0;transform:translateY(38px)}to{opacity:1;transform:translateY(0)}}</style>
 </helmet>
 <div style="min-height: 100vh; display: flex; flex-direction: column">
-  <dc-import name="SiteNav" theme="white" active="attorneys" hint-size="100%,113px"></dc-import>
+<dc-import name="SiteNav" theme="white" active="attorneys" hint-size="100%,113px"></dc-import>
 
-  <div style="background: var(--ink-900); background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27160%27%20height%3D%27160%27%20viewBox%3D%270%200%20160%20160%27%3E%3Cg%20transform%3D%27translate%2820%2C18%29%27%20fill%3D%27none%27%20stroke%3D%27%23BA9440%27%20stroke-opacity%3D%270.35%27%20stroke-width%3D%271.6%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M20%204v32%27%2F%3E%3Cpath%20d%3D%27M8%2036h24%27%2F%3E%3Cpath%20d%3D%27M6%2010h28%27%2F%3E%3Cpath%20d%3D%27M6%2010l-5%2012a6%205%200%200%200%2010%200z%27%2F%3E%3Cpath%20d%3D%27M34%2010l-5%2012a6%205%200%200%200%2010%200z%27%2F%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%274%27%20r%3D%271.6%27%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%27translate%28100%2C98%29%27%20fill%3D%27none%27%20stroke%3D%27%23BA9440%27%20stroke-opacity%3D%270.35%27%20stroke-width%3D%271.6%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M20%204v32%27%2F%3E%3Cpath%20d%3D%27M8%2036h24%27%2F%3E%3Cpath%20d%3D%27M6%2010h28%27%2F%3E%3Cpath%20d%3D%27M6%2010l-5%2012a6%205%200%200%200%2010%200z%27%2F%3E%3Cpath%20d%3D%27M34%2010l-5%2012a6%205%200%200%200%2010%200z%27%2F%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%274%27%20r%3D%271.6%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E'); background-size: 160px 160px;">
-    <div style="max-width: 1240px; margin: 0 auto; padding: 72px 24px 64px">
-      <div style="animation: pageRise 1300ms cubic-bezier(0.16,1,0.3,1) 100ms both; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brass-300)">Our attorneys</div>
-      <h1 style="animation: pageRise 1300ms cubic-bezier(0.16,1,0.3,1) 350ms both; font-family: var(--font-display); font-size: 52px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; margin: 16px 0 0; color: var(--paper-0); max-width: 760px">Experienced counsel, directly accessible</h1>
-      <p style="animation: pageRise 1300ms cubic-bezier(0.16,1,0.3,1) 600ms both; font-size: 17px; line-height: 1.65; color: var(--ink-300); margin: 20px 0 0; max-width: 620px">We are responsive and dedicated to outstanding legal services — and ever-mindful of the need to be efficient and cost-effective in helping you achieve your goals.</p>
-    </div>
-  </div>
+<div style="background: var(--ink-900); background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27160%27%20height%3D%27160%27%20viewBox%3D%270%200%20160%20160%27%3E%3Cg%20transform%3D%27translate%2820%2C18%29%27%20fill%3D%27none%27%20stroke%3D%27%23BA9440%27%20stroke-opacity%3D%270.35%27%20stroke-width%3D%271.6%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M20%204v32%27%2F%3E%3Cpath%20d%3D%27M8%2036h24%27%2F%3E%3Cpath%20d%3D%27M6%2010h28%27%2F%3E%3Cpath%20d%3D%27M6%2010l-5%2012a6%205%200%200%200%2010%200z%27%2F%3E%3Cpath%20d%3D%27M34%2010l-5%2012a6%205%200%200%200%2010%200z%27%2F%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%274%27%20r%3D%271.6%27%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%27translate%28100%2C98%29%27%20fill%3D%27none%27%20stroke%3D%27%23BA9440%27%20stroke-opacity%3D%270.35%27%20stroke-width%3D%271.6%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M20%204v32%27%2F%3E%3Cpath%20d%3D%27M8%2036h24%27%2F%3E%3Cpath%20d%3D%27M6%2010h28%27%2F%3E%3Cpath%20d%3D%27M6%2010l-5%2012a6%205%200%200%200%2010%200z%27%2F%3E%3Cpath%20d%3D%27M34%2010l-5%2012a6%205%200%200%200%2010%200z%27%2F%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%274%27%20r%3D%271.6%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E'); background-size: 160px 160px;">
+<div style="max-width: 1240px; margin: 0 auto; padding: 72px 24px 64px">
+<div style="animation: pageRise 1300ms cubic-bezier(0.16,1,0.3,1) 100ms both; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brass-300)">Our attorneys</div>
+<h1 style="animation: pageRise 1300ms cubic-bezier(0.16,1,0.3,1) 350ms both; font-family: var(--font-display); font-size: 52px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; margin: 16px 0 0; color: var(--paper-0); max-width: 760px">Experienced counsel, directly accessible</h1>
+<p style="animation: pageRise 1300ms cubic-bezier(0.16,1,0.3,1) 600ms both; font-size: 17px; line-height: 1.65; color: var(--ink-300); margin: 20px 0 0; max-width: 620px">We are responsive and dedicated to outstanding legal services — and ever-mindful of the need to be efficient and cost-effective in helping you achieve your goals.</p>
+</div>
+</div>
 
-  <div style="max-width: 1240px; margin: 0 auto; padding: 72px 24px 88px; width: 100%; box-sizing: border-box">
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px">
-      <sc-for list="{{ attorneys }}" as="at" hint-placeholder-count="6">
-        <div style="border: 1px solid var(--ink-100); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow 150ms ease, transform 150ms ease" style-hover="box-shadow: 0 2px 6px rgba(0,0,0,0.04), 0 6px 16px rgba(0,0,0,0.08); transform: translateY(-2px)">
-          <div style="aspect-ratio: 4 / 3; background: var(--paper-100); display: flex; align-items: center; justify-content: center; position: relative">
-            <span style="font-family: var(--font-display); font-size: 44px; font-weight: 700; color: var(--ink-300)">{{ at.initials }}</span>
-            <div style="position: absolute; inset: 0; background-image: {{ at.photoBg }}; background-size: cover; background-position: center 20%"></div>
-          </div>
-          <div style="padding: 24px; display: flex; flex-direction: column; gap: 4px; flex: 1">
-            <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
-              <div style="font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--ink-900)">{{ at.name }}</div>
-              <span style="font-size: 12px; font-weight: 600; color: var(--navy-700); background: var(--paper-50); border: 1px solid var(--ink-100); border-radius: 9999px; padding: 4px 12px; white-space: nowrap">{{ at.role }}</span>
-            </div>
-            <div style="font-size: 14px; line-height: 1.6; color: var(--ink-500); margin-top: 6px">{{ at.focus }}</div>
-            <div style="display: flex; flex-direction: column; gap: 4px; margin-top: 14px">
-              <a href="{{ at.telHref }}" style="font-size: 14px; color: var(--ink-700); text-decoration: none" style-hover="color: var(--navy-700)">{{ at.phone }}</a>
-              <a href="{{ at.mailHref }}" style="font-size: 14px; text-decoration: none">{{ at.email }}</a>
-            </div>
-            <sc-if value="{{ at.profileHref }}" hint-placeholder-val="{{ false }}">
-              <a href="{{ at.profileHref }}" style="margin-top: 16px; font-size: 14px; font-weight: 600">View full profile →</a>
-            </sc-if>
-          </div>
-        </div>
-      </sc-for>
-    </div>
-  </div>
+<div style="max-width: 1240px; margin: 0 auto; padding: 72px 24px 88px; width: 100%; box-sizing: border-box">
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px">
+<sc-for list="{{ attorneys }}" as="at" hint-placeholder-count="6">
+<div style="border: 1px solid var(--ink-100); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow 150ms ease, transform 150ms ease" style-hover="box-shadow: 0 2px 6px rgba(0,0,0,0.04), 0 6px 16px rgba(0,0,0,0.08); transform: translateY(-2px)">
+<div style="aspect-ratio: 4 / 3; background: var(--paper-100); display: flex; align-items: center; justify-content: center; position: relative">
+<span style="font-family: var(--font-display); font-size: 44px; font-weight: 700; color: var(--ink-300)">{{ at.initials }}</span>
+<div style="position: absolute; inset: 0; background-image: {{ at.photoBg }}; background-size: cover; background-position: center 20%"></div>
+</div>
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 4px; flex: 1">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<div style="font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--ink-900)">{{ at.name }}</div>
+<span style="font-size: 12px; font-weight: 600; color: var(--navy-700); background: var(--paper-50); border: 1px solid var(--ink-100); border-radius: 9999px; padding: 4px 12px; white-space: nowrap">{{ at.role }}</span>
+</div>
+<div style="font-size: 14px; line-height: 1.6; color: var(--ink-500); margin-top: 6px">{{ at.focus }}</div>
+<div style="display: flex; flex-direction: column; gap: 4px; margin-top: 14px">
+<a href="{{ at.telHref }}" style="font-size: 14px; color: var(--ink-700); text-decoration: none" style-hover="color: var(--navy-700)">{{ at.phone }}</a>
+<a href="{{ at.mailHref }}" style="font-size: 14px; text-decoration: none">{{ at.email }}</a>
+</div>
+<sc-if value="{{ at.profileHref }}" hint-placeholder-val="{{ false }}">
+<a href="{{ at.profileHref }}" style="margin-top: 16px; font-size: 14px; font-weight: 600">View full profile →</a>
+</sc-if>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
 
-  <div style="background: var(--navy-900)">
-    <div style="max-width: 1240px; margin: 0 auto; padding: 64px 24px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap">
-      <h2 style="font-family: var(--font-display); font-size: 30px; font-weight: 700; letter-spacing: -0.02em; color: var(--paper-0); margin: 0">Reach any of us directly — no gatekeepers.</h2>
-      <a href="contact.dc.html" style="background: var(--paper-0); color: var(--ink-900); border-radius: 9999px; padding: 16px 32px; font-size: 16px; font-weight: 600; text-decoration: none; white-space: nowrap" style-hover="background: var(--paper-100)">Schedule a consultation</a>
-    </div>
-  </div>
+<div style="background: var(--navy-900)">
+<div style="max-width: 1240px; margin: 0 auto; padding: 64px 24px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap">
+<h2 style="font-family: var(--font-display); font-size: 30px; font-weight: 700; letter-spacing: -0.02em; color: var(--paper-0); margin: 0">Reach any of us directly — no gatekeepers.</h2>
+<a href="contact.dc.html" style="background: var(--paper-0); color: var(--ink-900); border-radius: 9999px; padding: 16px 32px; font-size: 16px; font-weight: 600; text-decoration: none; white-space: nowrap" style-hover="background: var(--paper-100)">Schedule a consultation</a>
+</div>
+</div>
 
-  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+<dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  renderVals() {
-    const photos = {
-      'rodd-b-lape': 'https://lmng-law.com/wp-content/uploads/2016/06/Lapp.jpg',
-      'douglas-m-mansfield': 'https://lmng-law.com/wp-content/uploads/2016/06/Mansfield.jpg',
-      'william-e-nakasian': 'https://lmng-law.com/wp-content/uploads/2016/06/WEN.jpg',
-      'dan-t-carter': 'https://lmng-law.com/wp-content/uploads/2017/12/DTC5-e1516128777193.jpg',
-      'sarah-paynter': 'https://lmng-law.com/wp-content/uploads/2016/06/SMP-1-e1513007141422.jpg',
-      'rick-j-gibson': 'rick-gibson.jpg',
-      'matthew-e-nakasian': 'matt-nakasian.png'
-    };
-    const list = [
-      { name: 'Rodd B. Lape', role: 'Partner', initials: 'RL', slug: 'rodd-b-lape', phone: '614.763.2315', email: 'rlape@lmng-law.com', focus: 'Corporate practice — M&A, financings, joint ventures, and outside general counsel work.' },
-      { name: 'Douglas M. Mansfield', role: 'Partner', initials: 'DM', slug: 'douglas-m-mansfield', phone: '614.763.2316', email: 'dmansfield@lmng-law.com', focus: 'Trial lawyer — nationwide litigation and arbitration, complex commercial disputes.' },
-      { name: 'William E. Nakasian', role: 'Partner', initials: 'WN', slug: 'william-e-nakasian', phone: '614.763.2314', email: 'wenakasian@lmng-law.com', focus: 'Commercial real estate and finance — acquisitions, joint ventures, leasing, sale-leasebacks.' },
-      { name: 'Rick J. Gibson', role: 'Partner', initials: 'RG', slug: 'rick-j-gibson', phone: '614.763.2240', email: 'rjgibson@lmng-law.com', focus: 'M&A, financings, cell tower transactions, franchising, and corporate governance.' },
-      { name: 'Dan T. Carter', role: 'Of Counsel', initials: 'DC', slug: 'dan-t-carter', phone: '614.737.3400', email: 'dcarter@lmng-law.com', focus: 'Labor and employment — workplace safety, traditional labor, employment litigation.' },
-      { name: 'Sarah Paynter', role: 'Counsel', initials: 'SP', slug: 'sarah-paynter', phone: '614.763.6550', email: 'spaynter@lmng-law.com', focus: 'Corporate practice — M&A, financings, governance, and general business counseling.' },
-      { name: 'Matthew E. Nakasian', role: 'Associate', initials: 'MN', slug: 'matthew-e-nakasian', phone: '614.505.2299', email: 'mnakasian@lmng-law.com', focus: 'Real estate and finance, business transactions, and litigation.' }
-    ].map(a => ({ ...a, photoBg: photos[a.slug] ? "url('" + photos[a.slug] + "')" : 'none', profileHref: 'attorney-profile.dc.html?a=' + a.slug, telHref: 'tel:' + a.phone.replace(/\./g, ''), mailHref: 'mailto:' + a.email }));
-    return { attorneys: list };
-  }
+renderVals() {
+const photos = {
+'rodd-b-lape': 'https://lmng-law.com/wp-content/uploads/2016/06/Lapp.jpg',
+'douglas-m-mansfield': 'https://lmng-law.com/wp-content/uploads/2016/06/Mansfield.jpg',
+'william-e-nakasian': 'https://lmng-law.com/wp-content/uploads/2016/06/WEN.jpg',
+'dan-t-carter': 'https://lmng-law.com/wp-content/uploads/2017/12/DTC5-e1516128777193.jpg',
+'sarah-paynter': 'https://lmng-law.com/wp-content/uploads/2016/06/SMP-1-e1513007141422.jpg',
+'rick-j-gibson': 'R5W08866-RP.jpg',
+'matthew-e-nakasian': 'ChatGPT Image Aug 4, 2026, 08_19_25 AM.png'
+};
+const list = [
+{ name: 'Rodd B. Lape', role: 'Partner', initials: 'RL', slug: 'rodd-b-lape', phone: '614.763.2315', email: 'rlape@lmng-law.com', focus: 'Corporate practice — M&A, financings, joint ventures, and outside general counsel work.' },
+{ name: 'Douglas M. Mansfield', role: 'Partner', initials: 'DM', slug: 'douglas-m-mansfield', phone: '614.763.2316', email: 'dmansfield@lmng-law.com', focus: 'Trial lawyer — nationwide litigation and arbitration, complex commercial disputes.' },
+{ name: 'William E. Nakasian', role: 'Partner', initials: 'WN', slug: 'william-e-nakasian', phone: '614.763.2314', email: 'wenakasian@lmng-law.com', focus: 'Commercial real estate and finance — acquisitions, joint ventures, leasing, sale-leasebacks.' },
+{ name: 'Rick J. Gibson', role: 'Partner', initials: 'RG', slug: 'rick-j-gibson', phone: '614.763.2240', email: 'rjgibson@lmng-law.com', focus: 'M&A, financings, cell tower transactions, franchising, and corporate governance.' },
+{ name: 'Dan T. Carter', role: 'Of Counsel', initials: 'DC', slug: 'dan-t-carter', phone: '614.737.3400', email: 'dcarter@lmng-law.com', focus: 'Labor and employment — workplace safety, traditional labor, employment litigation.' },
+{ name: 'Sarah Paynter', role: 'Counsel', initials: 'SP', slug: 'sarah-paynter', phone: '614.763.6550', email: 'spaynter@lmng-law.com', focus: 'Corporate practice — M&A, financings, governance, and general business counseling.' },
+{ name: 'Matthew E. Nakasian', role: 'Associate', initials: 'MN', slug: 'matthew-e-nakasian', phone: '614.505.2299', email: 'mnakasian@lmng-law.com', focus: 'Real estate and finance, business transactions, and litigation.' }
+].map(a => ({ ...a, photoBg: photos[a.slug] ? "url('" + photos[a.slug] + "')" : 'none', profileHref: 'attorney-profile.dc.html?a=' + a.slug, telHref: 'tel:' + a.phone.replace(/\./g, ''), mailHref: 'mailto:' + a.email }));
+return { attorneys: list };
+}
 }
 </script>
 </body>
