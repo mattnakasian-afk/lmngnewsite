@@ -47,7 +47,13 @@
   @keyframes wordUp{from{opacity:0;transform:translateY(110%) rotate(2deg)}to{opacity:1;transform:translateY(0) rotate(0)}}
   @keyframes kenBurns{from{transform:scale(1) translateX(0)}to{transform:scale(1.08) translateX(-1.5%)}}
   @keyframes scrollCue{0%,100%{transform:translateY(0);opacity:0.7}50%{transform:translateY(8px);opacity:1}}
-  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}</style>
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @keyframes revealUp{from{opacity:0;transform:translateY(38px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes revealLeft{from{opacity:0;transform:translateX(-44px)}to{opacity:1;transform:translateX(0)}}
+  @keyframes revealRight{from{opacity:0;transform:translateX(44px)}to{opacity:1;transform:translateX(0)}}
+  @keyframes frameDraw{from{opacity:0;transform:translate(-14px,14px)}to{opacity:1;transform:translate(0,0)}}
+  @keyframes imgUnveil{from{clip-path:inset(0 0 100% 0);transform:scale(1.06)}to{clip-path:inset(0 0 0 0);transform:scale(1)}}
+  @media (prefers-reduced-motion: reduce){[data-reveal]{opacity:1!important;animation:none!important}}</style>
 </helmet>
 <div style="min-height: 100vh; display: flex; flex-direction: column">
   <dc-import name="SiteNav" active="home" theme="{{ navTheme }}" hint-size="100%,113px"></dc-import>
@@ -93,7 +99,7 @@
     <div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 96px">
 
       <div style="display: grid; grid-template-columns: 1.05fr 1fr; gap: 64px; align-items: center">
-        <div>
+        <div data-reveal="left" style="opacity: 0">
           <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px">
             <span style="width: 32px; height: 1px; background: var(--brass-500)"></span>
             <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-500)">01</span>
@@ -102,22 +108,22 @@
           <p style="font-size: 17px; line-height: 1.7; color: var(--ink-700); margin: 20px 0 0; max-width: 520px; text-wrap: pretty">We are a boutique general practice firm in central Ohio. Our attorneys built their practices at large national firms and brought that depth to a smaller setting — so you get partner-level judgment on every matter, not a rotating cast of associates.</p>
           <a href="about.dc.html" style="display: inline-flex; align-items: center; gap: 10px; margin-top: 28px; font-size: 16px; font-weight: 600; color: var(--ink-900); text-decoration: none; border-bottom: 1px solid var(--ink-200); padding-bottom: 6px" style-hover="border-bottom-color: var(--brass-500); gap: 16px">Meet the firm <span>&rarr;</span></a>
         </div>
-        <div style="position: relative; aspect-ratio: 3 / 2; width: 100%">
-          <span style="position: absolute; inset: 20px -20px -20px 20px; border: 1px solid var(--brass-500); border-radius: 180px 4px 180px 4px; pointer-events: none"></span>
-          <div style="position: absolute; inset: 0; border-radius: 180px 4px 180px 4px; overflow: hidden">
+        <div data-reveal="media" style="position: relative; aspect-ratio: 3 / 2; width: 100%">
+          <span data-reveal-frame style="opacity: 0; position: absolute; inset: 20px -20px -20px 20px; border: 1px solid var(--brass-500); border-radius: 180px 4px 180px 4px; pointer-events: none"></span>
+          <div data-reveal-img style="position: absolute; inset: 0; border-radius: 180px 4px 180px 4px; overflow: hidden">
             <image-slot id="home-who-we-are-photo" src="who-we-are.jpg" shape="rect" placeholder="Drop a photo"></image-slot>
           </div>
         </div>
       </div>
 
       <div style="display: grid; grid-template-columns: 1fr 1.05fr; gap: 64px; align-items: center">
-        <div style="position: relative; aspect-ratio: 3 / 2; width: 100%">
-          <span style="position: absolute; inset: 20px 20px -20px -20px; border: 1px solid var(--brass-500); border-radius: 4px 180px 4px 180px; pointer-events: none"></span>
-          <div style="position: absolute; inset: 0; border-radius: 4px 180px 4px 180px; overflow: hidden">
-            <img src="hero-1.jpg" alt="Business transactions" style="width: 100%; height: 100%; object-fit: cover; display: block">
+        <div data-reveal="media" style="position: relative; aspect-ratio: 3 / 2; width: 100%">
+          <span data-reveal-frame style="opacity: 0; position: absolute; inset: 20px 20px -20px -20px; border: 1px solid var(--brass-500); border-radius: 4px 180px 4px 180px; pointer-events: none"></span>
+          <div data-reveal-img style="position: absolute; inset: 0; border-radius: 4px 180px 4px 180px; overflow: hidden">
+            <image-slot id="home-what-we-do-v4" src="band-what-we-do.jpg" shape="rect" placeholder="Drop the What we do photo"></image-slot>
           </div>
         </div>
-        <div>
+        <div data-reveal="right" style="opacity: 0">
           <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px">
             <span style="width: 32px; height: 1px; background: var(--brass-500)"></span>
             <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-500)">02</span>
@@ -129,7 +135,7 @@
       </div>
 
       <div style="display: grid; grid-template-columns: 1.05fr 1fr; gap: 64px; align-items: center">
-        <div>
+        <div data-reveal="left" style="opacity: 0">
           <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px">
             <span style="width: 32px; height: 1px; background: var(--brass-500)"></span>
             <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-500)">03</span>
@@ -138,22 +144,22 @@
           <p style="font-size: 17px; line-height: 1.7; color: var(--ink-700); margin: 20px 0 0; max-width: 520px; text-wrap: pretty">National corporations, large-scale real estate developers, manufacturers and distributors, investors and private equity sponsors, closely held and family-owned companies, and professional practices. We handle the transactions that build their portfolios and the disputes that threaten them &mdash; and we represent individuals and families directly, in estate planning, succession, and personal matters.</p>
           <a href="attorneys.dc.html" style="display: inline-flex; align-items: center; gap: 10px; margin-top: 28px; font-size: 16px; font-weight: 600; color: var(--ink-900); text-decoration: none; border-bottom: 1px solid var(--ink-200); padding-bottom: 6px" style-hover="border-bottom-color: var(--brass-500); gap: 16px">Meet our team <span>&rarr;</span></a>
         </div>
-        <div style="position: relative; aspect-ratio: 3 / 2; width: 100%">
-          <span style="position: absolute; inset: 20px -20px -20px 20px; border: 1px solid var(--brass-500); border-radius: 180px 4px 180px 4px; pointer-events: none"></span>
-          <div style="position: absolute; inset: 0; border-radius: 180px 4px 180px 4px; overflow: hidden">
-            <img src="hero-3.jpg" alt="Clients we represent" style="width: 100%; height: 100%; object-fit: cover; display: block">
+        <div data-reveal="media" style="position: relative; aspect-ratio: 3 / 2; width: 100%">
+          <span data-reveal-frame style="opacity: 0; position: absolute; inset: 20px -20px -20px 20px; border: 1px solid var(--brass-500); border-radius: 180px 4px 180px 4px; pointer-events: none"></span>
+          <div data-reveal-img style="position: absolute; inset: 0; border-radius: 180px 4px 180px 4px; overflow: hidden">
+            <image-slot id="home-who-we-represent-v3" src="band-who-we-represent.jpg" shape="rect" placeholder="Drop the Who we represent photo"></image-slot>
           </div>
         </div>
       </div>
 
       <div style="display: grid; grid-template-columns: 1fr 1.05fr; gap: 64px; align-items: center">
-        <div style="position: relative; aspect-ratio: 3 / 2; width: 100%">
-          <span style="position: absolute; inset: 20px 20px -20px -20px; border: 1px solid var(--brass-500); border-radius: 4px 180px 4px 180px; pointer-events: none"></span>
-          <div style="position: absolute; inset: 0; border-radius: 4px 180px 4px 180px; overflow: hidden">
-            <img src="hero-2.jpg" alt="Columbus, Ohio" style="width: 100%; height: 100%; object-fit: cover; display: block">
+        <div data-reveal="media" style="position: relative; aspect-ratio: 3 / 2; width: 100%">
+          <span data-reveal-frame style="opacity: 0; position: absolute; inset: 20px 20px -20px -20px; border: 1px solid var(--brass-500); border-radius: 4px 180px 4px 180px; pointer-events: none"></span>
+          <div data-reveal-img style="position: absolute; inset: 0; border-radius: 4px 180px 4px 180px; overflow: hidden">
+            <image-slot id="home-why-choose-us-v4" src="band-why-choose-us.jpg" shape="rect" placeholder="Drop the mountain photo"></image-slot>
           </div>
         </div>
-        <div>
+        <div data-reveal="right" style="opacity: 0">
           <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px">
             <span style="width: 32px; height: 1px; background: var(--brass-500)"></span>
             <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-500)">04</span>
@@ -171,16 +177,16 @@
     <div style="position: absolute; inset: -4%; background-image: url('hero-2.jpg'); background-size: cover; background-position: center 55%; opacity: 0.16; filter: grayscale(1)"></div>
     <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(18,32,58,0.9) 0%, rgba(18,32,58,0.78) 50%, rgba(18,32,58,0.94) 100%)"></div>
     <div style="position: relative; max-width: 1240px; margin: 0 auto; padding: 96px 24px 104px">
-      <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px">
+      <div data-reveal="up" style="opacity: 0; display: flex; align-items: center; gap: 14px; margin-bottom: 18px">
         <span style="width: 32px; height: 1px; background: var(--brass-300)"></span>
         <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--paper-50)">Representative work</span>
       </div>
-      <h2 style="font-family: var(--font-display); font-size: 44px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.12; margin: 0; max-width: 780px; color: var(--paper-0)">Matters our attorneys have carried &mdash; and still do.</h2>
-      <p style="font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.72); margin: 20px 0 0; max-width: 620px; text-wrap: pretty">Representative engagements from our attorneys&rsquo; practices, at LMNG and at the national firms where they trained.</p>
+      <h2 data-reveal="up" style="opacity: 0; font-family: var(--font-display); font-size: 44px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.12; margin: 0; max-width: 780px; color: var(--paper-0)">Matters our attorneys have carried &mdash; and still do.</h2>
+      <p data-reveal="up" style="opacity: 0; font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.72); margin: 20px 0 0; max-width: 620px; text-wrap: pretty">Representative engagements from our attorneys&rsquo; practices, at LMNG and at the national firms where they trained.</p>
 
       <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(212,175,110,0.28); border: 1px solid rgba(212,175,110,0.28); margin-top: 56px">
         <sc-for list="{{ achievements }}" as="a" hint-placeholder-count="6">
-          <div style="background: var(--navy-900); padding: 34px 30px 36px; display: flex; flex-direction: column; gap: 12px">
+          <div data-reveal="stagger" style="opacity: 0; background: var(--navy-900); padding: 34px 30px 36px; display: flex; flex-direction: column; gap: 12px">
             <div style="font-family: var(--font-display); font-size: 36px; font-weight: 700; letter-spacing: -0.02em; color: var(--brass-300); line-height: 1">{{ a.figure }}</div>
             <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brass-500)">{{ a.tag }}</div>
             <p style="font-size: 15px; line-height: 1.65; color: var(--paper-50); margin: 4px 0 0; text-wrap: pretty">{{ a.text }}</p>
@@ -188,7 +194,7 @@
         </sc-for>
       </div>
 
-      <a href="attorneys.dc.html" style="display: inline-flex; align-items: center; gap: 10px; margin-top: 44px; font-size: 16px; font-weight: 600; color: var(--paper-0); text-decoration: none; border-bottom: 1px solid rgba(212,175,110,0.45); padding-bottom: 6px" style-hover="border-bottom-color: var(--brass-300); gap: 16px">See full representative experience by attorney <span>&rarr;</span></a>
+      <a data-reveal="up" href="attorneys.dc.html" style="opacity: 0; display: inline-flex; align-items: center; gap: 10px; margin-top: 44px; font-size: 16px; font-weight: 600; color: var(--paper-0); text-decoration: none; border-bottom: 1px solid rgba(212,175,110,0.45); padding-bottom: 6px" style-hover="border-bottom-color: var(--brass-300); gap: 16px">See full representative experience by attorney <span>&rarr;</span></a>
     </div>
   </div>
 
@@ -221,12 +227,39 @@ class Component extends DCLogic {
     }, { threshold: 0.4 });
     this.obs.observe(el);
   };
+  setupReveals() {
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    if (!els.length) return;
+    let staggerN = 0;
+    const ro = new IntersectionObserver((entries, obs) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const el = e.target, kind = el.getAttribute('data-reveal');
+        const E = 'cubic-bezier(0.16,1,0.3,1)';
+        if (kind === 'media') {
+          const frame = el.querySelector('[data-reveal-frame]'), img = el.querySelector('[data-reveal-img]');
+          if (img) { img.style.animation = 'imgUnveil 1000ms ' + E + ' both'; }
+          if (frame) { frame.style.animation = 'frameDraw 900ms ' + E + ' 260ms both'; }
+        } else if (kind === 'stagger') {
+          el.style.animation = 'revealUp 720ms ' + E + ' ' + (staggerN++ % 3) * 110 + 'ms both';
+        } else {
+          const name = kind === 'left' ? 'revealLeft' : kind === 'right' ? 'revealRight' : 'revealUp';
+          el.style.animation = name + ' 820ms ' + E + ' both';
+        }
+        obs.unobserve(el);
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(el => ro.observe(el));
+    this.revealObs = ro;
+  }
   componentDidMount() {
+    requestAnimationFrame(() => this.setupReveals());
     this.timer = setInterval(() => {
       if ((this.props.heroBackdrop ?? 'slideshow') === 'slideshow') this.setState(s => ({ idx: s.idx + 1 }));
     }, 6000);
   }
-  componentWillUnmount() { clearInterval(this.timer); if (this.obs) this.obs.disconnect(); }
+  componentWillUnmount() {
+    if (this.revealObs) this.revealObs.disconnect(); clearInterval(this.timer); if (this.obs) this.obs.disconnect(); }
   renderVals() {
     const mood = this.props.heroMood ?? 'photo';
     const backdrop = this.props.heroBackdrop ?? 'slideshow';
