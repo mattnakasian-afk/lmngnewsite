@@ -11,6 +11,7 @@
 <helmet>
   <link rel="stylesheet" href="lmng-styles.css">
   <script src="lmng-bundle.js"></script>
+  <script src="./image-slot.js"></script>
   <style>body{margin:0;background:var(--paper-0);font-family:var(--font-body);color:var(--ink-900)} a{color:var(--navy-700)} a:hover{color:var(--navy-900)}
   @media (max-width: 980px){
     nav{display:none!important}
@@ -24,6 +25,7 @@
     div[style*="grid-template-columns: 1fr 340px"],div[style*="grid-template-columns: 1fr 360px"]{grid-template-columns:1fr!important}
     div[style*="grid-template-columns: 320px 1fr"]{grid-template-columns:1fr!important}
     div[style*="grid-template-columns: 1.15fr 1fr"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: 1.05fr 1fr"],div[style*="grid-template-columns: 1fr 1.05fr"]{grid-template-columns:1fr!important;gap:28px!important}
     div[style*="grid-template-columns: 1.4fr 1fr 1fr 1.2fr"]{grid-template-columns:1fr 1fr!important}
     div[style*="position: sticky; top: 130px"],div[style*="position: sticky; top: 100px"]{position:static!important}
     h1 span{animation:none!important;opacity:1!important;transform:none!important}
@@ -65,7 +67,7 @@
         <p style="font-size: 18px; line-height: 1.65; color: var(--paper-50); margin: 20px 0 0; max-width: 560px; animation: heroRise 900ms cubic-bezier(0.16,1,0.3,1) 1150ms both">A boutique, general practice law firm in central Ohio, with particular emphasis on business law and litigation.</p>
         <div style="display: flex; gap: 16px; margin-top: 36px; animation: heroRise 900ms cubic-bezier(0.16,1,0.3,1) 1350ms both">
           <a href="contact.dc.html" style="background: var(--paper-0); color: var(--ink-900); border-radius: 9999px; padding: 16px 32px; font-size: 16px; font-weight: 600; text-decoration: none" style-hover="background: var(--paper-100)">Schedule a consultation</a>
-          <a href="practice-areas.dc.html" style="border: 1px solid rgba(255,255,255,0.55); color: var(--paper-0); border-radius: 9999px; padding: 15px 32px; font-size: 16px; font-weight: 600; text-decoration: none" style-hover="background: rgba(255,255,255,0.12)">See our practice areas</a>
+          <a href="practice-areas.dc.html" style="border: 1px solid rgba(255,255,255,0.55); color: var(--paper-0); border-radius: 9999px; padding: 15px 32px; font-size: 16px; font-weight: 600; text-decoration: none" style-hover="background: rgba(255,255,255,0.12)">See what we do</a>
         </div>
       </div>
     </div>
@@ -84,6 +86,109 @@
       <div><div style="font-family: var(--font-display); font-size: 34px; font-weight: 700; color: var(--ink-900)">{{ statFounded }}</div><div style="font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-500); margin-top: 6px">Founded</div></div>
       <div><div style="font-family: var(--font-display); font-size: 34px; font-weight: 700; color: var(--ink-900)">{{ statYears }}</div><div style="font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-500); margin-top: 6px">Combined experience</div></div>
       <div><div style="font-family: var(--font-display); font-size: 34px; font-weight: 700; color: var(--ink-900)">Powell, Ohio</div><div style="font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-500); margin-top: 6px">Central Ohio office</div></div>
+    </div>
+  </div>
+
+  <div style="background: var(--paper-50); padding: 96px 0 8px">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 96px">
+
+      <div style="display: grid; grid-template-columns: 1.05fr 1fr; gap: 64px; align-items: center">
+        <div>
+          <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px">
+            <span style="width: 32px; height: 1px; background: var(--brass-500)"></span>
+            <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-500)">01</span>
+          </div>
+          <h2 style="font-family: var(--font-display); font-size: 40px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; margin: 0; color: var(--ink-900)">Who we are</h2>
+          <p style="font-size: 17px; line-height: 1.7; color: var(--ink-700); margin: 20px 0 0; max-width: 520px; text-wrap: pretty">We are a boutique general practice firm in central Ohio. Our attorneys built their practices at large national firms and brought that depth to a smaller setting — so you get partner-level judgment on every matter, not a rotating cast of associates.</p>
+          <a href="about.dc.html" style="display: inline-flex; align-items: center; gap: 10px; margin-top: 28px; font-size: 16px; font-weight: 600; color: var(--ink-900); text-decoration: none; border-bottom: 1px solid var(--ink-200); padding-bottom: 6px" style-hover="border-bottom-color: var(--brass-500); gap: 16px">Meet the firm <span>&rarr;</span></a>
+        </div>
+        <div style="position: relative; aspect-ratio: 3 / 2; width: 100%">
+          <span style="position: absolute; inset: 20px -20px -20px 20px; border: 1px solid var(--brass-500); border-radius: 180px 4px 180px 4px; pointer-events: none"></span>
+          <div style="position: absolute; inset: 0; border-radius: 180px 4px 180px 4px; overflow: hidden">
+            <image-slot id="home-who-we-are-photo" src="who-we-are.jpg" shape="rect" placeholder="Drop a photo"></image-slot>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1.05fr; gap: 64px; align-items: center">
+        <div style="position: relative; aspect-ratio: 3 / 2; width: 100%">
+          <span style="position: absolute; inset: 20px 20px -20px -20px; border: 1px solid var(--brass-500); border-radius: 4px 180px 4px 180px; pointer-events: none"></span>
+          <div style="position: absolute; inset: 0; border-radius: 4px 180px 4px 180px; overflow: hidden">
+            <img src="hero-1.jpg" alt="Business transactions" style="width: 100%; height: 100%; object-fit: cover; display: block">
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px">
+            <span style="width: 32px; height: 1px; background: var(--brass-500)"></span>
+            <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-500)">02</span>
+          </div>
+          <h2 style="font-family: var(--font-display); font-size: 40px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; margin: 0; color: var(--ink-900)">What we do</h2>
+          <p style="font-size: 17px; line-height: 1.7; color: var(--ink-700); margin: 20px 0 0; max-width: 520px; text-wrap: pretty">Business transactions, litigation and dispute resolution, real estate and finance, business and regulatory counseling, estate planning, and outside general counsel work. Our attorneys move across those areas together, so a single matter never stalls at a practice-group boundary.</p>
+          <a href="practice-areas.dc.html" style="display: inline-flex; align-items: center; gap: 10px; margin-top: 28px; font-size: 16px; font-weight: 600; color: var(--ink-900); text-decoration: none; border-bottom: 1px solid var(--ink-200); padding-bottom: 6px" style-hover="border-bottom-color: var(--brass-500); gap: 16px">See what we do <span>&rarr;</span></a>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1.05fr 1fr; gap: 64px; align-items: center">
+        <div>
+          <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px">
+            <span style="width: 32px; height: 1px; background: var(--brass-500)"></span>
+            <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-500)">03</span>
+          </div>
+          <h2 style="font-family: var(--font-display); font-size: 40px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; margin: 0; color: var(--ink-900)">Who we represent</h2>
+          <p style="font-size: 17px; line-height: 1.7; color: var(--ink-700); margin: 20px 0 0; max-width: 520px; text-wrap: pretty">National corporations, large-scale real estate developers, manufacturers and distributors, investors and private equity sponsors, closely held and family-owned companies, and professional practices. We handle the transactions that build their portfolios and the disputes that threaten them &mdash; and we represent individuals and families directly, in estate planning, succession, and personal matters.</p>
+          <a href="attorneys.dc.html" style="display: inline-flex; align-items: center; gap: 10px; margin-top: 28px; font-size: 16px; font-weight: 600; color: var(--ink-900); text-decoration: none; border-bottom: 1px solid var(--ink-200); padding-bottom: 6px" style-hover="border-bottom-color: var(--brass-500); gap: 16px">Meet our team <span>&rarr;</span></a>
+        </div>
+        <div style="position: relative; aspect-ratio: 3 / 2; width: 100%">
+          <span style="position: absolute; inset: 20px -20px -20px 20px; border: 1px solid var(--brass-500); border-radius: 180px 4px 180px 4px; pointer-events: none"></span>
+          <div style="position: absolute; inset: 0; border-radius: 180px 4px 180px 4px; overflow: hidden">
+            <img src="hero-3.jpg" alt="Clients we represent" style="width: 100%; height: 100%; object-fit: cover; display: block">
+          </div>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1.05fr; gap: 64px; align-items: center">
+        <div style="position: relative; aspect-ratio: 3 / 2; width: 100%">
+          <span style="position: absolute; inset: 20px 20px -20px -20px; border: 1px solid var(--brass-500); border-radius: 4px 180px 4px 180px; pointer-events: none"></span>
+          <div style="position: absolute; inset: 0; border-radius: 4px 180px 4px 180px; overflow: hidden">
+            <img src="hero-2.jpg" alt="Columbus, Ohio" style="width: 100%; height: 100%; object-fit: cover; display: block">
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px">
+            <span style="width: 32px; height: 1px; background: var(--brass-500)"></span>
+            <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-500)">04</span>
+          </div>
+          <h2 style="font-family: var(--font-display); font-size: 40px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; margin: 0; color: var(--ink-900)">Why choose us</h2>
+          <p style="font-size: 17px; line-height: 1.7; color: var(--ink-700); margin: 20px 0 0; max-width: 520px; text-wrap: pretty">Our attorneys have closed sophisticated acquisitions, tried complex commercial cases, and served as outside general counsel for decades — experience earned at national firms. You reach the attorney doing your work, not an intake queue, and that attorney knows your business well enough to see the issue before it becomes a matter. Big firm experience, small firm attention.</p>
+          <a href="contact.dc.html" style="display: inline-flex; align-items: center; gap: 10px; margin-top: 28px; font-size: 16px; font-weight: 600; color: var(--ink-900); text-decoration: none; border-bottom: 1px solid var(--ink-200); padding-bottom: 6px" style-hover="border-bottom-color: var(--brass-500); gap: 16px">Schedule a consultation <span>&rarr;</span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="position: relative; background: var(--navy-900); margin-top: 96px; overflow: hidden">
+    <div style="position: absolute; inset: -4%; background-image: url('hero-2.jpg'); background-size: cover; background-position: center 55%; opacity: 0.16; filter: grayscale(1)"></div>
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(18,32,58,0.9) 0%, rgba(18,32,58,0.78) 50%, rgba(18,32,58,0.94) 100%)"></div>
+    <div style="position: relative; max-width: 1240px; margin: 0 auto; padding: 96px 24px 104px">
+      <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px">
+        <span style="width: 32px; height: 1px; background: var(--brass-300)"></span>
+        <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--paper-50)">Representative work</span>
+      </div>
+      <h2 style="font-family: var(--font-display); font-size: 44px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.12; margin: 0; max-width: 780px; color: var(--paper-0)">Matters our attorneys have carried &mdash; and still do.</h2>
+      <p style="font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.72); margin: 20px 0 0; max-width: 620px; text-wrap: pretty">Representative engagements from our attorneys&rsquo; practices, at LMNG and at the national firms where they trained.</p>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(212,175,110,0.28); border: 1px solid rgba(212,175,110,0.28); margin-top: 56px">
+        <sc-for list="{{ achievements }}" as="a" hint-placeholder-count="6">
+          <div style="background: var(--navy-900); padding: 34px 30px 36px; display: flex; flex-direction: column; gap: 12px">
+            <div style="font-family: var(--font-display); font-size: 36px; font-weight: 700; letter-spacing: -0.02em; color: var(--brass-300); line-height: 1">{{ a.figure }}</div>
+            <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brass-500)">{{ a.tag }}</div>
+            <p style="font-size: 15px; line-height: 1.65; color: var(--paper-50); margin: 4px 0 0; text-wrap: pretty">{{ a.text }}</p>
+          </div>
+        </sc-for>
+      </div>
+
+      <a href="attorneys.dc.html" style="display: inline-flex; align-items: center; gap: 10px; margin-top: 44px; font-size: 16px; font-weight: 600; color: var(--paper-0); text-decoration: none; border-bottom: 1px solid rgba(212,175,110,0.45); padding-bottom: 6px" style-hover="border-bottom-color: var(--brass-300); gap: 16px">See full representative experience by attorney <span>&rarr;</span></a>
     </div>
   </div>
 
@@ -132,7 +237,16 @@ class Component extends DCLogic {
       anim: 'kenBurns 12s ease-in-out infinite alternate'
     }));
     const marquee = ['Mergers & Acquisitions', '$2.5B+ in completed acquisitions', 'Complex Litigation', 'Commercial Real Estate', '21M sq ft industrial portfolio sale', 'Arbitration & Mediation', 'Estate Planning', 'Outside General Counsel', 'Franchising & Distribution', 'Labor & Employment', 'Venture & Private Equity'];
+    const achievements = [
+      { figure: '$2.5B+', tag: 'Mergers & acquisitions', text: 'Completed acquisitions of privately held companies in domestic and international jurisdictions for strategic and financial buyers.' },
+      { figure: '21M sq ft', tag: 'Commercial real estate', text: 'The $1.4 billion sale of CalEast Industrial Investors\u2019 core portfolio \u2014 industrial buildings across 18 cities.' },
+      { figure: '$5.0B', tag: 'Infrastructure', text: 'Aspects of Verizon\u2019s monetization of more than 11,000 communications towers with American Tower Corporation.' },
+      { figure: '$1.44B', tag: 'Cross-border', text: 'Sale of an equity stake in the Mexican subsidiary of a major Latin American mobile communications provider.' },
+      { figure: '100+', tag: 'Sale-leaseback', text: 'Nationwide portfolio sale-leaseback transactions for one of the country\u2019s largest financial institutions, spanning 19 million square feet.' },
+      { figure: 'Hundreds', tag: 'Litigation & arbitration', text: 'Arbitrations defended nationally for General Motors against dealers seeking franchise reinstatement following its bankruptcy.' }
+    ];
     return {
+      achievements,
       navTheme: this.props.headerTheme ?? 'white',
       heroLayers,
       heroFilter: mood === 'black-and-white' ? 'grayscale(1) contrast(1.08)' : 'none',

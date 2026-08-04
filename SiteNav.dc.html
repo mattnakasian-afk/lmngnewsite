@@ -67,9 +67,9 @@ class Component extends DCLogic {
   index() {
     return [
       { title: 'Home', section: 'Page', href: 'home.dc.html', kw: 'homepage welcome' },
-      { title: 'About the firm', section: 'Page', href: 'about.dc.html', kw: 'history jones day founded 2012 values boutique' },
-      { title: 'Practice areas', section: 'Page', href: 'practice-areas.dc.html', kw: 'services what we do' },
-      { title: 'Attorneys', section: 'Page', href: 'attorneys.dc.html', kw: 'lawyers team bios' },
+      { title: 'Who we are', section: 'Page', href: 'about.dc.html', kw: 'about the firm history founded 2012 values boutique' },
+      { title: 'What we do', section: 'Page', href: 'practice-areas.dc.html', kw: 'practice areas services' },
+      { title: 'Our team', section: 'Page', href: 'attorneys.dc.html', kw: 'attorneys lawyers team bios' },
       { title: 'Insights', section: 'Page', href: 'insights.dc.html', kw: 'articles publications reading news' },
       { title: 'Contact / consultation', section: 'Page', href: 'contact.dc.html', kw: 'schedule phone address office powell intake' },
       { title: 'Business & Regulatory Counseling', section: 'Practice', href: 'practice-areas.dc.html', kw: 'governance contracts compliance succession buy-sell non-compete finra franchise' },
@@ -97,9 +97,9 @@ class Component extends DCLogic {
     const inShell = window.name === 'lmng-shell' && !this.props.onNavigate;
     const links = [
       ['home', 'Home', 'home.dc.html'],
-      ['about', 'About', 'about.dc.html'],
-      ['practice', 'Practice Areas', 'practice-areas.dc.html'],
-      ['attorneys', 'Attorneys', 'attorneys.dc.html'],
+      ['about', 'Who We Are', 'about.dc.html'],
+      ['practice', 'What We Do', 'practice-areas.dc.html'],
+      ['attorneys', 'Our Team', 'attorneys.dc.html'],
       ['insights', 'Insights', 'insights.dc.html']
     ].map(([k, label, href]) => ({
       label, href, click: this.nav(href),

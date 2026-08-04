@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/lmng-design-system-e6bdbdba-9500-4d86-b36d-763e77cd300d/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/lmng-design-system-e6bdbdba-9500-4d86-b36d-763e77cd300d/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/lmng-design-system-e6bdbdba-9500-4d86-b36d-763e77cd300d/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/lmng-design-system-e6bdbdba-9500-4d86-b36d-763e77cd300d/tokens/effects.css">
+  <link rel="stylesheet" href="_ds/lmng-design-system-e6bdbdba-9500-4d86-b36d-763e77cd300d/styles.css">
+  <script src="_ds/lmng-design-system-e6bdbdba-9500-4d86-b36d-763e77cd300d/_ds_bundle.js"></script>
+  <style>body{margin:0;background:var(--paper-0);font-family:var(--font-body);color:var(--ink-900)} a{color:var(--navy-700)} a:hover{color:var(--navy-900)}
+  @media (max-width: 980px){
+    nav{display:none!important}
+    div[style*="flex: 0 1 180px"]{display:none!important}
+  }
+  @media (max-width: 900px){
+    h1{font-size:36px!important}
+    div[style*="grid-template-columns: repeat(4, 1fr)"]{grid-template-columns:repeat(2,1fr)!important}
+    div[style*="grid-template-columns: repeat(3, 1fr)"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: repeat(6, 1fr)"]{grid-template-columns:repeat(3,1fr)!important}
+    div[style*="grid-template-columns: 1fr 340px"],div[style*="grid-template-columns: 1fr 360px"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: 320px 1fr"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: 1.15fr 1fr"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: 1.4fr 1fr 1fr 1.2fr"]{grid-template-columns:1fr 1fr!important}
+    div[style*="position: sticky; top: 130px"],div[style*="position: sticky; top: 100px"]{position:static!important}
+    h1 span{animation:none!important;opacity:1!important;transform:none!important}
+  }
+  @media (max-width: 640px){
+    h1{font-size:30px!important}
+    div[style*="grid-template-columns: repeat(6, 1fr)"]{grid-template-columns:repeat(2,1fr)!important}
+    div[style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr!important}
+    div[style*="grid-template-columns: 1.4fr 1fr 1fr 1.2fr"]{grid-template-columns:1fr!important}
+  }
+  @view-transition{navigation:auto}
+  ::view-transition-group(site-nav){animation:none}
+  ::view-transition-old(site-nav),::view-transition-new(site-nav){animation:none}
+  ::view-transition-old(root){animation:none;opacity:0}
+  ::view-transition-new(root){animation:vtFade 180ms ease-out}
+  @keyframes vtFade{from{opacity:0.55}to{opacity:1}}</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; flex-direction: column">
+  <dc-import name="SiteNav" theme="white" active="practice" hint-size="100%,113px"></dc-import>
+
+  <div style="background: var(--navy-900)">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 64px 24px 60px">
+      <div style="font-size: 13px; color: var(--ink-300)"><a href="home.dc.html" style="color: var(--ink-300); text-decoration: none" style-hover="color: var(--paper-0)">Home</a> &nbsp;/&nbsp; <a href="practice-areas.dc.html" style="color: var(--ink-300); text-decoration: none" style-hover="color: var(--paper-0)">Practice Areas</a> &nbsp;/&nbsp; <span style="color: var(--paper-50)">Business Transactions</span></div>
+      <h1 style="font-family: var(--font-display); font-size: 52px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; margin: 20px 0 0; color: var(--paper-0)">Business Transactions</h1>
+      <p style="font-size: 17px; line-height: 1.65; color: var(--ink-200); margin: 18px 0 0; max-width: 640px">Deal counsel for buyers, sellers, lenders, and investors — from venture financings to multi-hundred-million-dollar acquisitions, domestic and international.</p>
+    </div>
+  </div>
+
+  <div style="max-width: 1240px; margin: 0 auto; padding: 72px 24px 88px; width: 100%; box-sizing: border-box; display: grid; grid-template-columns: 1fr 360px; gap: 64px; align-items: start">
+    <div>
+      <h2 style="font-family: var(--font-display); font-size: 26px; font-weight: 700; letter-spacing: -0.01em; margin: 0; color: var(--ink-900)">What we handle</h2>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px">
+        <sc-for list="{{ services }}" as="s" hint-placeholder-count="9">
+          <div style="display: flex; align-items: center; gap: 12px; border: 1px solid var(--ink-100); border-radius: 10px; padding: 16px 18px">
+            <span style="width: 6px; height: 6px; border-radius: 9999px; background: var(--brass-500); flex: none"></span>
+            <span style="font-size: 14px; font-weight: 500; color: var(--ink-700)">{{ s }}</span>
+          </div>
+        </sc-for>
+      </div>
+      <h2 style="font-family: var(--font-display); font-size: 26px; font-weight: 700; letter-spacing: -0.01em; margin: 56px 0 0; color: var(--ink-900)">How we work</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--ink-700); margin: 16px 0 0">We represent both buyers and sellers and have acted as lead counsel in scores of domestic and international M&amp;A transactions. Our attorneys structure, negotiate, and document complex mergers, acquisitions, dispositions, restructurings, joint ventures, credit facilities, and commercial transactions.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--ink-700); margin: 16px 0 0">Every client is different — a "one size fits all" approach is not an effective way to deliver deal advice. We tailor structure and negotiation to your business objectives while addressing the legal and business risks that matter.</p>
+      <h2 style="font-family: var(--font-display); font-size: 26px; font-weight: 700; letter-spacing: -0.01em; margin: 56px 0 0; color: var(--ink-900)">Representative experience</h2>
+      <div style="display: flex; flex-direction: column; margin-top: 16px">
+        <sc-for list="{{ experience }}" as="e" hint-placeholder-count="4">
+          <div style="display: flex; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--ink-100)">
+            <div style="font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--navy-700); white-space: nowrap; min-width: 110px">{{ e.figure }}</div>
+            <div style="font-size: 15px; line-height: 1.6; color: var(--ink-700)">{{ e.desc }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="position: sticky; top: 100px; border: 1px solid var(--ink-100); border-radius: 14px; padding: 28px; box-shadow: 0 2px 6px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.06)">
+      <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brass-700)">Talk to a deal lawyer</div>
+      <div style="display: flex; align-items: center; gap: 14px; margin-top: 18px">
+        <div style="width: 56px; height: 56px; border-radius: 9999px; background: var(--paper-100); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; color: var(--ink-300)">RL</div>
+        <div>
+          <a href="attorney-profile.dc.html?a=rodd-b-lape" style="font-size: 16px; font-weight: 600; color: var(--ink-900); text-decoration: none" style-hover="color: var(--navy-700)">Rodd B. Lape</a>
+          <div style="font-size: 13px; color: var(--ink-500)">Partner · 25+ years of practice</div>
+        </div>
+      </div>
+      <p style="font-size: 14px; line-height: 1.6; color: var(--ink-500); margin: 16px 0 0">Lead lawyer on scores of domestic and international M&amp;A transactions, including over $2.5&nbsp;billion in completed acquisitions.</p>
+      <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px">
+        <a href="contact.dc.html" style="display: block; text-align: center; background: var(--navy-700); color: var(--paper-0); border-radius: 9999px; padding: 14px 24px; font-size: 15px; font-weight: 600; text-decoration: none" style-hover="background: var(--navy-900)">Schedule a consultation</a>
+        <a href="attorney-profile.dc.html?a=rodd-b-lape" style="display: block; text-align: center; border: 1px solid var(--ink-200); color: var(--ink-900); border-radius: 9999px; padding: 13px 24px; font-size: 15px; font-weight: 600; text-decoration: none" style-hover="background: var(--paper-50)">View full profile</a>
+      </div>
+    </div>
+  </div>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      services: ['Debt & Equity Financing', 'Joint Ventures', 'Management & Leveraged Buy-Outs', 'Mergers, Acquisitions & Dispositions', 'Private Placements', 'Restructurings & Reorganizations', 'Strategic Alliances', 'Stock & Asset Sales & Purchases', 'Venture Capital Financings'],
+      experience: [
+        { figure: '$2.5B+', desc: 'Completed acquisitions of privately held companies in domestic and international jurisdictions for strategic and financial buyers across industries.' },
+        { figure: '$1.44B', desc: 'Sale of equity stake in the Mexican subsidiary of a major Latin American mobile communication provider.' },
+        { figure: '$465M', desc: 'Sale of substantially all assets of a Tier 1 automotive supplier pursuant to a highly contested Section 363 bankruptcy sale.' },
+        { figure: '$2.5B', desc: 'Long-term rail transportation agreement for a major utility company.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
