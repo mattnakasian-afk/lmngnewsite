@@ -70,7 +70,7 @@ class Component extends DCLogic {
       { title: 'Who we are', section: 'Page', href: 'about.dc.html', kw: 'about the firm history founded 2012 values boutique' },
       { title: 'What we do', section: 'Page', href: 'practice-areas.dc.html', kw: 'practice areas services' },
       { title: 'Our team', section: 'Page', href: 'attorneys.dc.html', kw: 'attorneys lawyers team bios' },
-      { title: 'Insights', section: 'Page', href: 'insights.dc.html', kw: 'articles publications reading news' },
+      { title: 'Firm experience', section: 'Page', href: 'insights.dc.html', kw: 'insights representative work matters publications' },
       { title: 'Contact / consultation', section: 'Page', href: 'contact.dc.html', kw: 'schedule phone address office powell intake' },
       { title: 'Business & Regulatory Counseling', section: 'Practice', href: 'practice-areas.dc.html', kw: 'governance contracts compliance succession buy-sell non-compete finra franchise' },
       { title: 'Business Transactions', section: 'Practice', href: 'practice-business-transactions.dc.html', kw: 'mergers acquisitions m&a financing joint ventures venture capital private placements buyouts' },
@@ -100,7 +100,7 @@ class Component extends DCLogic {
       ['about', 'Who We Are', 'about.dc.html'],
       ['practice', 'What We Do', 'practice-areas.dc.html'],
       ['attorneys', 'Our Team', 'attorneys.dc.html'],
-      ['insights', 'Insights', 'insights.dc.html']
+      ['insights', 'Firm Experience', 'insights.dc.html']
     ].map(([k, label, href]) => ({
       label, href, click: this.nav(href),
       weight: k === active ? 600 : 500,
